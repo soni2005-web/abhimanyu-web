@@ -1,402 +1,392 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>ABHIMANYU.WEB | Website Design Services</title>
+<title>ABHIMANYU.WEB | Website Design Services</title>
 
-    <meta name="description"
-          content="ABHIMANYU.WEB creates modern, mobile-friendly websites for shops, small businesses and professionals. Contact us on WhatsApp.">
+<meta name="description" content="ABHIMANYU.WEB creates modern websites for shops, small businesses and professionals. Contact us on WhatsApp.">
 
-    <meta name="theme-color" content="#07111f">
+<style>
+:root {
+    --bg: #07111f;
+    --card: #101f33;
+    --text: #f4f7fb;
+    --muted: #b5c2d4;
+    --accent: #32d6c5;
+    --green: #25D366;
+}
 
-    <style>
-        :root {
-            --bg: #07111f;
-            --card: #101f33;
-            --text: #f4f7fb;
-            --muted: #b5c2d4;
-            --accent: #32d6c5;
-            --blue: #4c8dff;
-            --green: #25D366;
-        }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+html {
+    scroll-behavior: smooth;
+}
 
-        html {
-            scroll-behavior: smooth;
-        }
+body {
+    font-family: Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
 
-        body {
-            font-family: Arial, sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            line-height: 1.6;
-        }
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
+.container {
+    width: min(1100px, 92%);
+    margin: auto;
+}
 
-        .container {
-            width: min(1100px, 92%);
-            margin: auto;
-        }
+header {
+    background: #0b1829;
+    border-bottom: 1px solid #22334a;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
 
-        header {
-            background: #0b1829;
-            border-bottom: 1px solid #22334a;
-            position: sticky;
-            top: 0;
-            z-index: 10;
-        }
+.navbar {
+    min-height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
 
-        .navbar {
-            min-height: 75px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px;
-        }
+.logo {
+    font-size: 23px;
+    font-weight: bold;
+}
 
-        .logo {
-            font-size: 23px;
-            font-weight: bold;
-        }
+.logo span {
+    color: var(--accent);
+}
 
-        .logo span {
-            color: var(--accent);
-        }
+nav {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+}
 
-        nav {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
+nav a {
+    color: var(--muted);
+    font-size: 14px;
+}
 
-        nav a {
-            color: var(--muted);
-            font-size: 14px;
-        }
+nav a:hover {
+    color: var(--accent);
+}
 
-        nav a:hover {
-            color: var(--accent);
-        }
+.hero {
+    padding: 90px 0 75px;
+    background:
+        radial-gradient(circle at 85% 20%, #163a50 0, transparent 35%),
+        var(--bg);
+}
 
-        .hero {
-            padding: 90px 0 75px;
-            background:
-                radial-gradient(
-                    circle at 85% 20%,
-                    #163a50 0,
-                    transparent 35%
-                ),
-                var(--bg);
-        }
+.badge {
+    display: inline-block;
+    border: 1px solid #2b756f;
+    color: var(--accent);
+    padding: 7px 13px;
+    border-radius: 30px;
+    font-size: 13px;
+    margin-bottom: 22px;
+}
 
-        .badge {
-            display: inline-block;
-            border: 1px solid #2b756f;
-            color: var(--accent);
-            padding: 7px 13px;
-            border-radius: 30px;
-            font-size: 13px;
-            margin-bottom: 22px;
-        }
+.hero h1 {
+    font-size: clamp(36px, 6vw, 62px);
+    line-height: 1.12;
+    max-width: 780px;
+    margin-bottom: 22px;
+}
 
-        .hero h1 {
-            font-size: clamp(36px, 6vw, 62px);
-            line-height: 1.12;
-            max-width: 780px;
-            margin-bottom: 22px;
-        }
+.hero h1 span {
+    color: var(--accent);
+}
 
-        .hero h1 span {
-            color: var(--accent);
-        }
+.hero p {
+    color: var(--muted);
+    max-width: 650px;
+    font-size: 17px;
+    margin-bottom: 30px;
+}
 
-        .hero p {
-            color: var(--muted);
-            max-width: 650px;
-            font-size: 17px;
-            margin-bottom: 30px;
-        }
+.buttons {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
 
-        .buttons {
-            display: flex;
-            gap: 14px;
-            flex-wrap: wrap;
-        }
+.btn {
+    display: inline-block;
+    padding: 13px 21px;
+    border-radius: 9px;
+    background: var(--accent);
+    color: #06201f;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    text-align: center;
+    transition: 0.2s;
+}
 
-        .btn {
-            display: inline-block;
-            padding: 13px 21px;
-            border-radius: 9px;
-            background: var(--accent);
-            color: #06201f;
-            font-weight: bold;
-            border: none;
-            cursor: pointer;
-            font-size: 15px;
-            text-align: center;
-            transition: 0.2s;
-        }
+.btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
 
-        .btn:hover {
-            transform: translateY(-2px);
-            opacity: 0.9;
-        }
+.btn-outline {
+    border: 1px solid #40536b;
+    background: transparent;
+    color: var(--text);
+}
 
-        .btn-outline {
-            border: 1px solid #40536b;
-            background: transparent;
-            color: var(--text);
-        }
+.btn-whatsapp {
+    background: var(--green);
+    color: #062b13;
+}
 
-        .btn-whatsapp {
-            background: var(--green);
-            color: #062b13;
-        }
+section {
+    padding: 70px 0;
+}
 
-        section {
-            padding: 70px 0;
-        }
+.section-title {
+    font-size: 34px;
+    margin-bottom: 12px;
+    text-align: center;
+}
 
-        .section-title {
-            font-size: 34px;
-            margin-bottom: 12px;
-            text-align: center;
-        }
+.section-desc {
+    text-align: center;
+    color: var(--muted);
+    margin: 0 auto 38px;
+    max-width: 650px;
+}
 
-        .section-desc {
-            text-align: center;
-            color: var(--muted);
-            margin: 0 auto 38px;
-            max-width: 650px;
-        }
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
 
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 20px;
-        }
+.card {
+    background: var(--card);
+    border: 1px solid #23364d;
+    border-radius: 16px;
+    padding: 25px;
+}
 
-        .card {
-            background: var(--card);
-            border: 1px solid #23364d;
-            border-radius: 16px;
-            padding: 25px;
-        }
+.card h3 {
+    font-size: 21px;
+    margin-bottom: 12px;
+}
 
-        .card h3 {
-            font-size: 21px;
-            margin-bottom: 12px;
-        }
+.card p,
+.card li {
+    color: var(--muted);
+    font-size: 15px;
+}
 
-        .card p,
-        .card li {
-            color: var(--muted);
-            font-size: 15px;
-        }
+.card ul {
+    padding-left: 19px;
+    margin: 18px 0;
+}
 
-        .card ul {
-            padding-left: 19px;
-            margin: 18px 0;
-        }
+.card li {
+    margin-bottom: 8px;
+}
 
-        .card li {
-            margin-bottom: 8px;
-        }
+.icon {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
 
-        .icon {
-            font-size: 32px;
-            margin-bottom: 12px;
-        }
+.price {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 15px 0;
+    color: var(--accent);
+}
 
-        .price {
-            font-size: 30px;
-            font-weight: bold;
-            margin: 15px 0;
-            color: var(--accent);
-        }
+.price small {
+    font-size: 13px;
+    color: var(--muted);
+    font-weight: normal;
+}
 
-        .price small {
-            font-size: 13px;
-            color: var(--muted);
-            font-weight: normal;
-        }
+.highlight {
+    border-color: var(--accent);
+}
 
-        .highlight {
-            border-color: var(--accent);
-        }
+.note {
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 22px;
+}
 
-        .note {
-            text-align: center;
-            color: var(--muted);
-            font-size: 13px;
-            margin-top: 22px;
-        }
+.about-box {
+    background: linear-gradient(135deg, #102a3b, #101f33);
+    border: 1px solid #28465c;
+    padding: 32px;
+    border-radius: 18px;
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+}
 
-        .about-box {
-            background: linear-gradient(135deg, #102a3b, #101f33);
-            border: 1px solid #28465c;
-            padding: 32px;
-            border-radius: 18px;
-            max-width: 850px;
-            margin: auto;
-            text-align: center;
-        }
+.about-box p {
+    color: var(--muted);
+    margin-top: 12px;
+}
 
-        .about-box p {
-            color: var(--muted);
-            margin-top: 12px;
-        }
+.contact-layout {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 25px;
+    align-items: start;
+}
 
-        .contact-layout {
-            display: grid;
-            grid-template-columns: 0.8fr 1.2fr;
-            gap: 25px;
-            align-items: start;
-        }
+.contact-info,
+.contact-form {
+    background: var(--card);
+    border: 1px solid #23364d;
+    border-radius: 16px;
+    padding: 25px;
+}
 
-        .contact-info,
-        .contact-form {
-            background: var(--card);
-            border: 1px solid #23364d;
-            border-radius: 16px;
-            padding: 25px;
-        }
+.contact-info p {
+    color: var(--muted);
+    margin: 15px 0;
+}
 
-        .contact-info p {
-            color: var(--muted);
-            margin: 15px 0;
-        }
+.phone-number {
+    display: inline-block;
+    color: var(--accent);
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 5px;
+}
 
-        .phone-number {
-            display: inline-block;
-            color: var(--accent);
-            font-size: 20px;
-            font-weight: bold;
-            margin-top: 5px;
-        }
+label {
+    display: block;
+    margin: 14px 0 6px;
+    font-size: 14px;
+}
 
-        label {
-            display: block;
-            margin: 14px 0 6px;
-            font-size: 14px;
-        }
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #354a63;
+    border-radius: 8px;
+    background: #091626;
+    color: var(--text);
+    font: inherit;
+}
 
-        input,
-        select,
-        textarea {
-            width: 100%;
-            padding: 13px;
-            border: 1px solid #354a63;
-            border-radius: 8px;
-            background: #091626;
-            color: var(--text);
-            font: inherit;
-        }
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
 
-        input:focus,
-        select:focus,
-        textarea:focus {
-            outline: 1px solid var(--accent);
-            border-color: var(--accent);
-        }
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 1px solid var(--accent);
+    border-color: var(--accent);
+}
 
-        textarea {
-            min-height: 120px;
-            resize: vertical;
-        }
+.contact-form .btn {
+    width: 100%;
+    margin-top: 18px;
+}
 
-        .contact-form .btn {
-            width: 100%;
-            margin-top: 18px;
-        }
+.whatsapp-info {
+    margin-top: 20px;
+    padding: 15px;
+    background: #0b2923;
+    border: 1px solid #1b5943;
+    border-radius: 10px;
+    color: #c8f7d8;
+    font-size: 14px;
+}
 
-        .whatsapp-info {
-            margin-top: 20px;
-            padding: 15px;
-            background: #0b2923;
-            border: 1px solid #1b5943;
-            border-radius: 10px;
-            color: #c8f7d8;
-            font-size: 14px;
-        }
+footer {
+    padding: 27px 0;
+    border-top: 1px solid #22334a;
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+}
 
-        footer {
-            padding: 27px 0;
-            border-top: 1px solid #22334a;
-            text-align: center;
-            color: var(--muted);
-            font-size: 13px;
-        }
+.floating-whatsapp {
+    position: fixed;
+    bottom: 22px;
+    right: 22px;
+    z-index: 20;
+    background: var(--green);
+    color: #062b13;
+    padding: 13px 18px;
+    border-radius: 50px;
+    font-weight: bold;
+    box-shadow: 0 5px 20px #0005;
+}
 
-        .floating-whatsapp {
-            position: fixed;
-            bottom: 22px;
-            right: 22px;
-            z-index: 20;
-            background: var(--green);
-            color: #062b13;
-            padding: 13px 18px;
-            border-radius: 50px;
-            font-weight: bold;
-            box-shadow: 0 5px 20px #0005;
-        }
+@media (max-width: 760px) {
+    .navbar {
+        padding: 15px 0;
+        align-items: flex-start;
+        flex-direction: column;
+    }
 
-        @media (max-width: 760px) {
-            .navbar {
-                padding: 15px 0;
-                align-items: flex-start;
-                flex-direction: column;
-            }
+    nav {
+        gap: 13px;
+    }
 
-            nav {
-                gap: 13px;
-            }
+    .hero {
+        padding: 60px 0;
+    }
 
-            .hero {
-                padding: 60px 0;
-            }
+    .grid,
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
 
-            .grid,
-            .contact-layout {
-                grid-template-columns: 1fr;
-            }
+    section {
+        padding: 52px 0;
+    }
 
-            section {
-                padding: 52px 0;
-            }
+    .section-title {
+        font-size: 29px;
+    }
 
-            .section-title {
-                font-size: 29px;
-            }
-
-            .floating-whatsapp {
-                bottom: 14px;
-                right: 14px;
-                padding: 11px 15px;
-            }
-        }
-    </style>
+    .floating-whatsapp {
+        bottom: 14px;
+        right: 14px;
+        padding: 11px 15px;
+    }
+}
+</style>
 </head>
 
 <body>
 
 <header>
     <div class="container navbar">
-
-        <a href="#home" class="logo">
-            ABHIMANYU<span>.WEB</span>
-        </a>
+        <a href="#home" class="logo">ABHIMANYU<span>.WEB</span></a>
 
         <nav>
             <a href="#home">Home</a>
@@ -405,467 +395,290 @@
             <a href="#about">About</a>
             <a href="#contact">Contact</a>
         </nav>
-
     </div>
 </header>
 
 <main>
 
-    <!-- HOME -->
+<section class="hero" id="home">
+    <div class="container">
+        <span class="badge">WEBSITE DESIGN & DEVELOPMENT</span>
 
-    <section class="hero" id="home">
-        <div class="container">
+        <h1>Your Business Deserves a <span>Better Website.</span></h1>
 
-            <span class="badge">
-                WEBSITE DESIGN & DEVELOPMENT
-            </span>
+        <p>
+            We help shops, small businesses and professionals build
+            modern websites that look good on mobile phones and computers.
+            Let's bring your business online.
+        </p>
 
-            <h1>
-                Your Business Deserves a
-                <span>Better Website.</span>
-            </h1>
+        <div class="buttons">
+            <a class="btn" href="#contact">Get a Website</a>
+            <a class="btn btn-outline" href="#services">Explore Services</a>
+        </div>
+    </div>
+</section>
+
+<section id="services">
+    <div class="container">
+        <h2 class="section-title">Our Services</h2>
+
+        <p class="section-desc">
+            Website solutions for businesses that want to grow online.
+        </p>
+
+        <div class="grid">
+            <article class="card">
+                <div class="icon">🏪</div>
+                <h3>Shop Websites</h3>
+                <p>
+                    Show your products, business details, opening hours
+                    and contact information online.
+                </p>
+            </article>
+
+            <article class="card">
+                <div class="icon">🏢</div>
+                <h3>Business Websites</h3>
+                <p>
+                    Present your company, services, experience and
+                    customer enquiry details professionally.
+                </p>
+            </article>
+
+            <article class="card">
+                <div class="icon">👨‍💻</div>
+                <h3>Portfolio Websites</h3>
+                <p>
+                    Display your skills, projects and work experience
+                    in one simple online portfolio.
+                </p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section id="pricing">
+    <div class="container">
+        <h2 class="section-title">Simple Pricing</h2>
+
+        <p class="section-desc">
+            Starting prices for common website types. Final pricing
+            depends on the features and requirements.
+        </p>
+
+        <div class="grid">
+            <article class="card">
+                <h3>Starter</h3>
+                <p>For a simple online presence.</p>
+                <div class="price">₹1,500 <small>starting at</small></div>
+
+                <ul>
+                    <li>One-page website</li>
+                    <li>Mobile-friendly layout</li>
+                    <li>Business information</li>
+                    <li>Contact button</li>
+                </ul>
+
+                <a class="btn btn-outline" href="#contact">Enquire Now</a>
+            </article>
+
+            <article class="card highlight">
+                <h3>Business</h3>
+                <p>For shops and small businesses.</p>
+                <div class="price">₹3,000 <small>starting at</small></div>
+
+                <ul>
+                    <li>Multiple sections</li>
+                    <li>Services or products</li>
+                    <li>WhatsApp contact</li>
+                    <li>Responsive design</li>
+                </ul>
+
+                <a class="btn" href="#contact">Enquire Now</a>
+            </article>
+
+            <article class="card">
+                <h3>Professional</h3>
+                <p>For more customised requirements.</p>
+                <div class="price">₹7,000 <small>starting at</small></div>
+
+                <ul>
+                    <li>Custom website design</li>
+                    <li>Additional pages</li>
+                    <li>Project-specific features</li>
+                    <li>Requirements discussion</li>
+                </ul>
+
+                <a class="btn btn-outline" href="#contact">Enquire Now</a>
+            </article>
+        </div>
+
+        <p class="note">
+            Prices are indicative examples, not a binding quotation.
+            Domain, hosting and additional features may cost extra.
+        </p>
+    </div>
+</section>
+
+<section id="about">
+    <div class="container">
+        <div class="about-box">
+            <h2>About ABHIMANYU.WEB</h2>
 
             <p>
-                We help shops, small businesses and professionals
-                build modern websites that look good on mobile phones
-                and computers. Let's bring your business online.
+                ABHIMANYU.WEB aims to help local shops, startups and
+                professionals establish their presence on the internet
+                with clear, modern and mobile-friendly websites.
             </p>
 
-            <div class="buttons">
-
-                <a class="btn"
-                   href="#contact">
-                    Get a Website
-                </a>
-
-                <a class="btn btn-outline"
-                   href="#services">
-                    Explore Services
-                </a>
-
-            </div>
-
+            <p>
+                Tell us about your business and the type of website you need.
+                We can discuss your requirements and pricing on WhatsApp.
+            </p>
         </div>
-    </section>
+    </div>
+</section>
 
+<section id="contact">
+    <div class="container">
+        <h2 class="section-title">Let's Discuss Your Website</h2>
 
-    <!-- SERVICES -->
+        <p class="section-desc">
+            Fill in your details and send your project enquiry directly
+            through WhatsApp.
+        </p>
 
-    <section id="services">
-        <div class="container">
+        <div class="contact-layout">
 
-            <h2 class="section-title">
-                Our Services
-            </h2>
-
-            <p class="section-desc">
-                Website solutions for businesses that want to
-                grow online.
-            </p>
-
-            <div class="grid">
-
-                <article class="card">
-                    <div class="icon">🏪</div>
-
-                    <h3>Shop Websites</h3>
-
-                    <p>
-                        Show your products, business details,
-                        opening hours and contact information online.
-                    </p>
-                </article>
-
-                <article class="card">
-                    <div class="icon">🏢</div>
-
-                    <h3>Business Websites</h3>
-
-                    <p>
-                        Present your company, services, experience
-                        and customer enquiry details professionally.
-                    </p>
-                </article>
-
-                <article class="card">
-                    <div class="icon">👨‍💻</div>
-
-                    <h3>Portfolio Websites</h3>
-
-                    <p>
-                        Display your skills, projects and work
-                        experience in one simple online portfolio.
-                    </p>
-                </article>
-
-            </div>
-
-        </div>
-    </section>
-
-
-    <!-- PRICING -->
-
-    <section id="pricing">
-        <div class="container">
-
-            <h2 class="section-title">
-                Simple Pricing
-            </h2>
-
-            <p class="section-desc">
-                Starting prices for common website types.
-                Final pricing depends on the features and requirements.
-            </p>
-
-            <div class="grid">
-
-                <article class="card">
-
-                    <h3>Starter</h3>
-
-                    <p>For a simple online presence.</p>
-
-                    <div class="price">
-                        ₹1,500 <small>starting at</small>
-                    </div>
-
-                    <ul>
-                        <li>One-page website</li>
-                        <li>Mobile-friendly layout</li>
-                        <li>Business information</li>
-                        <li>Contact button</li>
-                    </ul>
-
-                    <a class="btn btn-outline"
-                       href="#contact">
-                        Enquire Now
-                    </a>
-
-                </article>
-
-
-                <article class="card highlight">
-
-                    <h3>Business</h3>
-
-                    <p>For shops and small businesses.</p>
-
-                    <div class="price">
-                        ₹3,000 <small>starting at</small>
-                    </div>
-
-                    <ul>
-                        <li>Multiple sections</li>
-                        <li>Services or products</li>
-                        <li>WhatsApp contact</li>
-                        <li>Responsive design</li>
-                    </ul>
-
-                    <a class="btn"
-                       href="#contact">
-                        Enquire Now
-                    </a>
-
-                </article>
-
-
-                <article class="card">
-
-                    <h3>Professional</h3>
-
-                    <p>For more customised requirements.</p>
-
-                    <div class="price">
-                        ₹7,000 <small>starting at</small>
-                    </div>
-
-                    <ul>
-                        <li>Custom website design</li>
-                        <li>Additional pages</li>
-                        <li>Project-specific features</li>
-                        <li>Requirements discussion</li>
-                    </ul>
-
-                    <a class="btn btn-outline"
-                       href="#contact">
-                        Enquire Now
-                    </a>
-
-                </article>
-
-            </div>
-
-            <p class="note">
-                Prices are indicative examples, not a binding quotation.
-                Domain, hosting and additional features may cost extra.
-            </p>
-
-        </div>
-    </section>
-
-
-    <!-- ABOUT -->
-
-    <section id="about">
-        <div class="container">
-
-            <div class="about-box">
-
-                <h2>About ABHIMANYU.WEB</h2>
+            <div class="contact-info">
+                <h3>Contact Details</h3>
 
                 <p>
-                    ABHIMANYU.WEB aims to help local shops,
-                    startups and professionals establish their
-                    presence on the internet with clear, modern
-                    and mobile-friendly websites.
-                </p>
+                    📱 WhatsApp / Mobile:
+                    <br>
 
-                <p>
-                    Tell us about your business and the type
-                    of website you need. We can discuss your
-                    requirements and pricing on WhatsApp.
-                </p>
-
-            </div>
-
-        </div>
-    </section>
-
-
-    <!-- CONTACT -->
-
-    <section id="contact">
-        <div class="container">
-
-            <h2 class="section-title">
-                Let's Discuss Your Website
-            </h2>
-
-            <p class="section-desc">
-                Fill in your details and send your project
-                enquiry directly through WhatsApp.
-            </p>
-
-            <div class="contact-layout">
-
-                <!-- CONTACT DETAILS -->
-
-                <div class="contact-info">
-
-                    <h3>Contact Details</h3>
-
-                    <p>
-                        📱 WhatsApp / Mobile:
-                        <br>
-
-                        <a class="phone-number"
-                           href="https://wa.me/918579973237"
-                           target="_blank"
-                           rel="noopener noreferrer">
-                            +91 8579973237
-                        </a>
-                    </p>
-
-                    <p>
-                        Have an idea for a website?
-                        Contact us directly on WhatsApp
-                        to discuss your project.
-                    </p>
-
-                    <a class="btn btn-whatsapp"
-                       href="https://wa.me/918579973237?text=Hello%20ABHIMANYU.WEB%2C%20I%20want%20to%20discuss%20a%20website%20project."
+                    <a class="phone-number"
+                       href="https://wa.me/918579973237"
                        target="_blank"
                        rel="noopener noreferrer">
-                        Chat on WhatsApp
+                        +91 8579973237
                     </a>
+                </p>
 
-                    <div class="whatsapp-info">
-                        ✅ Quick contact<br>
-                        ✅ Discuss your website<br>
-                        ✅ Ask about pricing
-                    </div>
+                <p>
+                    Have an idea for a website?
+                    Contact us directly on WhatsApp to discuss your project.
+                </p>
 
+                <a class="btn btn-whatsapp"
+                   href="https://wa.me/918579973237?text=Hello%20ABHIMANYU.WEB%2C%20I%20want%20to%20discuss%20a%20website%20project."
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Chat on WhatsApp
+                </a>
+
+                <div class="whatsapp-info">
+                    ✅ Quick contact<br>
+                    ✅ Discuss your website<br>
+                    ✅ Ask about pricing
                 </div>
-
-
-                <!-- PROJECT ENQUIRY FORM -->
-
-                <form class="contact-form" id="enquiryForm">
-
-                    <h3>Project Enquiry</h3>
-
-                    <label for="customerName">
-                        Your Name
-                    </label>
-
-                    <input
-                        id="customerName"
-                        name="customerName"
-                        type="text"
-                        placeholder="Enter your name"
-                        required
-                    >
-
-
-                    <label for="businessType">
-                        Business Type
-                    </label>
-
-                    <select
-                        id="businessType"
-                        name="businessType"
-                        required
-                    >
-                        <option value="">
-                            Select your business
-                        </option>
-
-                        <option value="Shop">Shop</option>
-
-                        <option value="Small Business">
-                            Small Business
-                        </option>
-
-                        <option value="Company">
-                            Company
-                        </option>
-
-                        <option value="Portfolio">
-                            Portfolio
-                        </option>
-
-                        <option value="Other">
-                            Other
-                        </option>
-
-                    </select>
-
-
-                    <label for="requirements">
-                        What Website Do You Need?
-                    </label>
-
-                    <textarea
-                        id="requirements"
-                        name="requirements"
-                        placeholder="Tell us what kind of website you need..."
-                        required
-                    ></textarea>
-
-
-                    <button
-                        class="btn btn-whatsapp"
-                        type="submit"
-                    >
-                        Send Enquiry on WhatsApp
-                    </button>
-
-                    <p class="note">
-                        WhatsApp will open with your enquiry.
-                        Review the message and press Send.
-                    </p>
-
-                </form>
-
             </div>
 
+            <form class="contact-form" id="enquiryForm">
+                <h3>Project Enquiry</h3>
+
+                <label for="customerName">Your Name</label>
+                <input
+                    id="customerName"
+                    name="customerName"
+                    type="text"
+                    placeholder="Enter your name"
+                    required
+                >
+
+                <label for="businessType">Business Type</label>
+                <select id="businessType" name="businessType" required>
+                    <option value="">Select your business</option>
+                    <option value="Shop">Shop</option>
+                    <option value="Small Business">Small Business</option>
+                    <option value="Company">Company</option>
+                    <option value="Portfolio">Portfolio</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <label for="requirements">What Website Do You Need?</label>
+                <textarea
+                    id="requirements"
+                    name="requirements"
+                    placeholder="Tell us what kind of website you need..."
+                    required
+                ></textarea>
+
+                <button class="btn btn-whatsapp" type="submit">
+                    Send Enquiry on WhatsApp
+                </button>
+
+                <p class="note">
+                    WhatsApp will open with your enquiry. Review the
+                    message and press Send.
+                </p>
+            </form>
+
         </div>
-    </section>
+    </div>
+</section>
 
 </main>
 
-
-<!-- FOOTER -->
-
 <footer>
     <div class="container">
-
-        © <span id="year"></span>
-        ABHIMANYU.WEB. All rights reserved.
-
-        <p>
-            Website Design & Development
-        </p>
-
+        © <span id="year"></span> ABHIMANYU.WEB. All rights reserved.
+        <p>Website Design & Development</p>
     </div>
 </footer>
-
-
-<!-- FLOATING WHATSAPP BUTTON -->
 
 <a
     class="floating-whatsapp"
     href="https://wa.me/918579973237?text=Hello%20ABHIMANYU.WEB%2C%20I%20want%20to%20discuss%20a%20website."
     target="_blank"
     rel="noopener noreferrer"
-    aria-label="Contact ABHIMANYU.WEB on WhatsApp"
->
+    aria-label="Contact ABHIMANYU.WEB on WhatsApp">
     WhatsApp Us
 </a>
 
-
 <script>
-    // Current year in the footer
-    document.getElementById("year").textContent =
-        new Date().getFullYear();
+document.getElementById("year").textContent =
+    new Date().getFullYear();
 
+document.getElementById("enquiryForm").addEventListener(
+    "submit",
+    function(event) {
+        event.preventDefault();
 
-    // Send the customer's enquiry to WhatsApp
-    document
-        .getElementById("enquiryForm")
-        .addEventListener("submit", function(event) {
+        const name = document.getElementById("customerName").value.trim();
+        const business = document.getElementById("businessType").value;
+        const requirements = document.getElementById("requirements").value.trim();
 
-            event.preventDefault();
+        const phoneNumber = "918579973237";
 
-            const name = document
-                .getElementById("customerName")
-                .value.trim();
+        const message =
+            "Hello ABHIMANYU.WEB!\n\n" +
+            "I want to enquire about a website.\n\n" +
+            "My Name: " + name + "\n" +
+            "Business Type: " + business + "\n" +
+            "Website Requirements: " + requirements + "\n\n" +
+            "Please contact me about my project.";
 
-            const business = document
-                .getElementById("businessType")
-                .value;
+        const whatsappURL =
+            "https://wa.me/" + phoneNumber +
+            "?text=" + encodeURIComponent(message);
 
-            const requirements = document
-                .getElementById("requirements")
-                .value.trim();
-
-
-            // Your WhatsApp number with India country code
-            const phoneNumber = "918579973237";
-
-
-            // Create the enquiry message
-            const message =
-                "Hello ABHIMANYU.WEB!\n\n" +
-                "I want to enquire about a website.\n\n" +
-                "My Name: " + name + "\n" +
-                "Business Type: " + business + "\n" +
-                "Website Requirements: " + requirements + "\n\n" +
-                "Please contact me about my project.";
-
-
-            // Encode message for the WhatsApp URL
-            const encodedMessage =
-                encodeURIComponent(message);
-
-
-            // Open WhatsApp with the enquiry filled in
-            const whatsappURL =
-                "https://wa.me/" +
-                phoneNumber +
-                "?text=" +
-                encodedMessage;
-
-
-            window.open(
-                whatsappURL,
-                "_blank",
-                "noopener,noreferrer"
-            );
-
-        });
+        window.open(whatsappURL, "_blank", "noopener,noreferrer");
+    }
+);
 </script>
 
 </body>
 </html>
+```
