@@ -1,352 +1,44 @@
-```html
 <!doctype html>
-<html lang="en">
-<head>
+<html lang="en"><head>
 <meta name="google-site-verification" content="j8Hgd3WLiml2FNQwlDj5pLeWcbvPRPlvHBBUg31Y4yg" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#07111f">
-<meta name="description" content="Modern mobile-friendly websites for shops, local businesses and personal brands. Contact ABHIMANYU.WEB for affordable website design.">
-<meta name="robots" content="index,follow">
-<title>ABHIMANYU.WEB | Websites That Grow Your Business</title>
-
-<style>
-:root{--bg:#07111f;--panel:#0d1b2d;--text:#f3f7ff;--muted:#a7b6cc;--cyan:#59e1e6;--line:#ffffff1b;--green:#25d366}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:85px}
-body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 Inter,system-ui,-apple-system,"Segoe UI",sans-serif}
-a{color:inherit;text-decoration:none}
-.wrap{width:min(1100px,92%);margin:auto}
-.nav{position:sticky;top:0;z-index:5;background:#07111fee;backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-.navin{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.logo{font-size:1.12rem;font-weight:900;letter-spacing:.3px}
-.logo span,h1 span{color:var(--cyan)}
-.links{display:flex;gap:22px;color:var(--muted);font-size:.92rem}
-.links a:hover{color:var(--cyan)}
-.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:11px;font-weight:800;border:1px solid var(--line);cursor:pointer;transition:.2s}
-.btn:hover{transform:translateY(-2px)}
-.primary{background:linear-gradient(110deg,var(--cyan),#9bf5d1);color:#06111d;border:0}
-.hero{padding:82px 0 72px;background:radial-gradient(ellipse at 82% 8%,#2467a538,transparent 38%)}
-.grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
-.eyebrow,.kicker{color:var(--cyan);font-size:.78rem;font-weight:900;letter-spacing:1.5px;text-transform:uppercase}
-.eyebrow{display:inline-block;border:1px solid #59e1e644;border-radius:50px;padding:7px 12px;background:#59e1e60c}
-h1{font-size:clamp(2.7rem,5.7vw,4.6rem);line-height:1.04;letter-spacing:-2px;margin:20px 0}
-h1 span{background:linear-gradient(100deg,var(--cyan),#b4c0ff);color:transparent;background-clip:text}
-.lead{font-size:1.1rem;color:var(--muted);max-width:590px}
-.actions{display:flex;gap:12px;flex-wrap:wrap;margin:26px 0}
-.checks{display:flex;gap:17px;flex-wrap:wrap;color:var(--muted);font-size:.88rem}
-.checks b{color:var(--text)}
-.preview{padding:18px;border:1px solid #ffffff25;border-radius:24px;background:linear-gradient(145deg,#142942,#091523);box-shadow:0 28px 70px #0006;transform:rotate(1deg)}
-.dots{display:flex;gap:6px;border-bottom:1px solid var(--line);padding:5px 3px 14px}
-.dots i{width:8px;height:8px;background:#ffffff55;border-radius:50%}
-.screen{padding:27px 14px 14px}
-.screen small{color:var(--cyan);letter-spacing:1.3px;font-weight:900}
-.screen h2{font-size:2rem;line-height:1.1;margin:10px 0}
-.screen p{color:var(--muted);font-size:.9rem}
-.mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}
-.mini{padding:15px;border-radius:12px;background:#ffffff09;border:1px solid var(--line)}
-.mini b{display:block}
-.mini span{font-size:.8rem;color:var(--muted)}
-section{padding:72px 0}
-.head{max-width:680px;margin-bottom:30px}
-.head h2{font-size:clamp(2rem,4vw,2.8rem);line-height:1.12;letter-spacing:-.8px;margin:9px 0 12px}
-.head p,.card p,.project p,.pricecard>p{color:var(--muted)}
-.cards,.showcase,.prices{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.card,.pricecard{border:1px solid var(--line);border-radius:17px;padding:23px;background:linear-gradient(145deg,#102139,#0a1727)}
-.ico{width:42px;height:42px;display:grid;place-items:center;border-radius:12px;background:#59e1e618;color:var(--cyan);font-size:1.25rem;margin-bottom:15px}
-.card h3,.project h3{margin:0 0 7px}
-.card p,.project p{font-size:.92rem;margin:0}
-.project{overflow:hidden;border:1px solid var(--line);border-radius:17px;background:var(--panel)}
-.art{padding:18px;height:170px;display:flex;align-items:end;background:radial-gradient(circle at 80% 15%,#59e1e655,transparent 32%),linear-gradient(135deg,#173956,#10182e)}
-.project:nth-child(2) .art{background:linear-gradient(135deg,#39265a,#12172b)}
-.project:nth-child(3) .art{background:linear-gradient(135deg,#584022,#171827)}
-.browser{width:100%;background:#f5f7ff;color:#14243b;padding:14px;border-radius:10px 10px 0 0}
-.browser small{display:block;color:#60718a;font-size:.68rem}
-.browser b{display:block;margin-top:4px;font-size:1.05rem}
-.pinfo{padding:18px}
-.tag{display:inline-block;color:var(--cyan);font-size:.73rem;font-weight:900;margin-top:10px}
-.pricecard{display:flex;flex-direction:column}
-.pricecard.featured{border-color:#59e1e677;background:linear-gradient(150deg,#123147,#0b192b)}
-.badge{color:var(--cyan);font-size:.75rem;font-weight:900;text-transform:uppercase;letter-spacing:1px}
-.pricecard h3{margin:9px 0 0}
-.price{font-size:2.25rem;font-weight:900}
-.price small{font-size:.78rem;color:var(--muted);font-weight:500}
-.pricecard ul{list-style:none;padding:0;flex:1}
-.pricecard li{padding:6px 0;font-size:.9rem}
-.pricecard li:before{content:'✓';color:var(--cyan);font-weight:900;margin-right:9px}
-.note,.formnote{font-size:.82rem;color:var(--muted)}
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}
-.step{padding:18px;border-left:2px solid #59e1e666;background:#ffffff04}
-.step small{color:var(--cyan);font-weight:900}
-.step h3{font-size:1rem;margin:7px 0}
-.step p{font-size:.88rem;color:var(--muted);margin:0}
-.faq{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.faq details{border:1px solid var(--line);border-radius:13px;padding:16px;background:#ffffff04}
-.faq summary{cursor:pointer;font-weight:800}
-.faq p{color:var(--muted);font-size:.91rem}
-.contactgrid{display:grid;grid-template-columns:.8fr 1.2fr;gap:20px}
-.contactbox,.formbox{padding:25px;border:1px solid var(--line);border-radius:18px;background:var(--panel)}
-.contactbox p{color:var(--muted)}
-.number{font-size:1.1rem;font-weight:800}
-.method{padding:13px 0;border-bottom:1px solid var(--line)}
-.method small{display:block;color:var(--muted)}
-form{display:grid;grid-template-columns:1fr 1fr;gap:13px}
-label{font-size:.84rem;font-weight:800;display:block;margin-bottom:5px}
-input,select,textarea{width:100%;padding:12px 13px;border-radius:10px;border:1px solid #ffffff25;background:#071422;color:var(--text);font:inherit;font-size:.92rem}
-textarea{min-height:105px;resize:vertical}
-.full{grid-column:1/-1}
-form button{width:100%;font:inherit}
-.footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-size:.85rem}
-.footerin{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-.wa{position:fixed;right:18px;bottom:18px;z-index:6;background:var(--green);color:#062414;padding:12px 16px;border-radius:40px;font-weight:900;box-shadow:0 8px 25px #0006}
-@media(max-width:800px){
-.links{display:none}
-.grid,.contactgrid{grid-template-columns:1fr}
-.hero{padding:58px 0}
-.preview{max-width:520px;width:100%;margin:auto}
-.cards,.showcase,.prices{grid-template-columns:1fr 1fr}
-.steps{grid-template-columns:1fr 1fr}
+<meta name="description" content="Need a website for your shop, company, local business or portfolio? ABHIMANYU.WEB creates professional, mobile-friendly websites with WhatsApp enquiries. Starting at ₹1,500. Contact +91 8579973237.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://soni2005-web.github.io/abhimanyu-web/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ABHIMANYU.WEB">
+<meta property="og:title" content="ABHIMANYU.WEB | Website Design for Businesses">
+<meta property="og:description" content="Professional, mobile-friendly websites for shops, companies, local businesses and personal brands. Enquire on WhatsApp.">
+<meta property="og:url" content="https://soni2005-web.github.io/abhimanyu-web/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ABHIMANYU.WEB | Website Design for Businesses">
+<meta name="twitter:description" content="Get a professional website for your business. Starting at ₹1,500. Contact us on WhatsApp.">
+<title>Website Design for Businesses | ABHIMANYU.WEB</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "ABHIMANYU.WEB",
+  "url": "https://soni2005-web.github.io/abhimanyu-web/",
+  "description": "Website design for shops, companies, local businesses and personal brands, with mobile-friendly layouts and WhatsApp enquiry options.",
+  "telephone": "+91-8579973237",
+  "areaServed": "India",
+  "priceRange": "₹1,500–₹7,000+",
+  "sameAs": ["https://wa.me/918579973237"]
 }
-@media(max-width:540px){
-section{padding:55px 0}
-.cards,.showcase,.prices,.faq{grid-template-columns:1fr}
-.navin{height:65px}
-h1{letter-spacing:-1.2px}
-.contactbox,.formbox{padding:19px}
-form{grid-template-columns:1fr}
-.full{grid-column:auto}
-.checks{gap:10px}
-.wa{right:10px;bottom:10px}
-}
-</style>
-</head>
-
-<body>
-<header class="nav">
-<div class="wrap navin">
-<a class="logo" href="#home">ABHIMANYU<span>.WEB</span></a>
-<nav class="links">
-<a href="#services">Services</a>
-<a href="#work">Sample Work</a>
-<a href="#pricing">Pricing</a>
-<a href="#process">Process</a>
-<a href="#contact">Contact</a>
-</nav>
-<a class="btn primary" href="#contact">Start a Project ↗</a>
-</div>
-</header>
-
-<main>
-<section class="hero" id="home">
-<div class="wrap grid">
-<div>
-<div class="eyebrow">Websites for growing businesses</div>
-<h1>Your business deserves a <span>better website.</span></h1>
-<p class="lead">Modern, mobile-friendly websites for shops, local businesses and personal brands — designed to help customers discover you and contact you easily.</p>
-<div class="actions">
-<a class="btn primary" href="#contact">Discuss Your Website ↗</a>
-<a class="btn" href="#work">Explore Sample Designs ↓</a>
-</div>
-<div class="checks">
-<span>✓ <b>Mobile-friendly</b></span>
-<span>✓ <b>WhatsApp enquiries</b></span>
-<span>✓ <b>Clear pricing</b></span>
-</div>
-</div>
-<div class="preview">
-<div class="dots"><i></i><i></i><i></i></div>
-<div class="screen">
-<small>YOUR ONLINE PRESENCE</small>
-<h2>Make a great<br>first impression.</h2>
-<p>A clean website helps people understand your business, explore your services and get in touch.</p>
-<div class="mini-grid">
-<div class="mini"><b>01 / Discover</b><span>Show your business</span></div>
-<div class="mini"><b>02 / Connect</b><span>Make enquiries easy</span></div>
-<div class="mini"><b>03 / Build trust</b><span>Present your services</span></div>
-<div class="mini"><b>04 / Grow</b><span>Be available online</span></div>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<section id="services">
-<div class="wrap">
-<div class="head">
-<div class="kicker">What I can build</div>
-<h2>Everything your business needs to get online.</h2>
-<p>Simple, useful websites with the important details customers look for.</p>
-</div>
-<div class="cards">
-<article class="card"><div class="ico">▦</div><h3>Business Website</h3><p>Introduce your company, show services, share contact details and help customers reach you.</p></article>
-<article class="card"><div class="ico">⌂</div><h3>Shop & Local Business</h3><p>Display products, opening hours, location and WhatsApp ordering or enquiry options.</p></article>
-<article class="card"><div class="ico">✦</div><h3>Portfolio & Personal Brand</h3><p>Present your work, skills, experience and projects in a polished format.</p></article>
-<article class="card"><div class="ico">▤</div><h3>Landing Page</h3><p>A focused page for one service, offer or campaign with a clear call to action.</p></article>
-<article class="card"><div class="ico">☏</div><h3>WhatsApp Enquiries</h3><p>Let visitors fill an enquiry form and open a ready-to-send WhatsApp message.</p></article>
-<article class="card"><div class="ico">↗</div><h3>Responsive Design</h3><p>A layout designed to work across phones, tablets and desktop screens.</p></article>
-</div>
-</div>
-</section>
-
-<section id="work">
-<div class="wrap">
-<div class="head">
-<div class="kicker">Design examples</div>
-<h2>Ideas for your kind of business.</h2>
-<p>Illustrative design concepts, not completed client projects. Each customer website is tailored to their real business.</p>
-</div>
-<div class="showcase">
-<article class="project">
-<div class="art"><div class="browser"><small>LOCAL SHOP / SAMPLE</small><b>Fresh Market</b><small>Fresh produce · Offers · Contact</small></div></div>
-<div class="pinfo"><h3>Local Shop Website</h3><p>Products, offers, location and WhatsApp enquiries.</p><span class="tag">SAMPLE CONCEPT</span></div>
-</article>
-<article class="project">
-<div class="art"><div class="browser"><small>BUSINESS / SAMPLE</small><b>Nova Services</b><small>Services · About · Get in touch</small></div></div>
-<div class="pinfo"><h3>Company Website</h3><p>Professional services, company details and enquiries.</p><span class="tag">SAMPLE CONCEPT</span></div>
-</article>
-<article class="project">
-<div class="art"><div class="browser"><small>PORTFOLIO / SAMPLE</small><b>Creative Studio</b><small>Work · About · Contact</small></div></div>
-<div class="pinfo"><h3>Personal Portfolio</h3><p>A clean way to showcase skills and selected work.</p><span class="tag">SAMPLE CONCEPT</span></div>
-</article>
-</div>
-</div>
-</section>
-
-<section id="pricing">
-<div class="wrap">
-<div class="head">
-<div class="kicker">Simple starting prices</div>
-<h2>Choose a starting point.</h2>
-<p>Final price depends on pages, features and content. Scope and price are confirmed before work begins.</p>
-</div>
-<div class="prices">
-<article class="pricecard">
-<span class="badge">Starter</span><h3>One-page Website</h3>
-<div class="price">₹1,500 <small>starting at</small></div>
-<p>For a simple online introduction.</p>
-<ul><li>Single scrolling page</li><li>Mobile-friendly layout</li><li>Business details and services</li><li>WhatsApp contact button</li></ul>
-<a class="btn" href="#contact" data-plan="Starter package (starting at ₹1,500)">Enquire about Starter</a>
-</article>
-<article class="pricecard featured">
-<span class="badge">Most flexible</span><h3>Business Website</h3>
-<div class="price">₹3,000 <small>starting at</small></div>
-<p>For a business that needs more detail.</p>
-<ul><li>Multi-section website</li><li>Services or product showcase</li><li>WhatsApp enquiry form</li><li>Contact and location details</li></ul>
-<a class="btn primary" href="#contact" data-plan="Business package (starting at ₹3,000)">Enquire about Business</a>
-</article>
-<article class="pricecard">
-<span class="badge">Custom</span><h3>Advanced Website</h3>
-<div class="price">₹7,000 <small>starting at</small></div>
-<p>For custom layouts and extra features.</p>
-<ul><li>Custom page structure</li><li>Detailed sections</li><li>Feature planning</li><li>Scope agreed beforehand</li></ul>
-<a class="btn" href="#contact" data-plan="Advanced package (starting at ₹7,000)">Discuss Custom Work</a>
-</article>
-</div>
-<p class="note">Prices are indicative starting prices, not a final quote. Domain, hosting, paid services and advanced functionality may cost extra if required.</p>
-</div>
-</section>
-
-<section id="process">
-<div class="wrap">
-<div class="head">
-<div class="kicker">How it works</div>
-<h2>A clear process from idea to launch.</h2>
-<p>You’ll know what information is needed and what happens next.</p>
-</div>
-<div class="steps">
-<article class="step"><small>STEP 01</small><h3>Tell me your idea</h3><p>Share your business type, goals and preferred style.</p></article>
-<article class="step"><small>STEP 02</small><h3>Confirm the plan</h3><p>Agree on pages, features, price and timeline.</p></article>
-<article class="step"><small>STEP 03</small><h3>Review the design</h3><p>Check the draft and share changes before launch.</p></article>
-<article class="step"><small>STEP 04</small><h3>Launch your site</h3><p>Publish after final checks and agreed approval.</p></article>
-</div>
-</div>
-</section>
-
-<section id="faq">
-<div class="wrap">
-<div class="head"><div class="kicker">Common questions</div><h2>Good to know before we start.</h2></div>
-<div class="faq">
-<details><summary>How much does a website cost?</summary><p>Packages start at the prices shown. Final pricing depends on pages and features and is confirmed before work begins.</p></details>
-<details><summary>Will it work on mobile phones?</summary><p>Yes. The responsive layout adapts to common phone, tablet and desktop screens.</p></details>
-<details><summary>Can customers contact me on WhatsApp?</summary><p>Yes. The form opens WhatsApp with a prepared message. The customer reviews and sends it in WhatsApp.</p></details>
-<details><summary>What information should I provide?</summary><p>Your business name, services, contact details, logo and photos if available. We can discuss anything missing.</p></details>
-</div>
-</div>
-</section>
-
-<section id="contact">
-<div class="wrap">
-<div class="head">
-<div class="kicker">Let’s talk</div>
-<h2>Tell me about your website project.</h2>
-<p>Fill in the form to prepare your enquiry in WhatsApp.</p>
-</div>
-<div class="contactgrid">
-<div class="contactbox">
-<h3>Let’s build your online presence.</h3>
-<p>Share a little about your business and what you need. I’ll get the details through WhatsApp.</p>
-<div class="method"><small>Call / WhatsApp</small><a class="number" href="https://wa.me/918579973237" target="_blank" rel="noopener">+91 8579973237 ↗</a></div>
-<div class="method"><small>Next step</small><b>Discuss your requirements</b></div>
-<p class="note">No payment is taken through this website. Project scope and pricing are discussed directly.</p>
-<a class="btn" href="https://wa.me/918579973237?text=Hello%20ABHIMANYU.WEB%2C%20I%20want%20to%20discuss%20a%20website%20project." target="_blank" rel="noopener">Chat on WhatsApp ↗</a>
-</div>
-
-<div class="formbox">
-<h3>Project enquiry</h3>
-<form id="enquiryForm">
-<div><label for="name">Your name *</label><input id="name" autocomplete="name" placeholder="e.g. Rahul" required></div>
-<div><label for="business">Business type *</label>
-<select id="business" required>
-<option value="">Choose one</option><option>Shop / Retail</option><option>Food / Restaurant</option><option>Construction / Services</option><option>Professional / Company</option><option>Portfolio / Personal</option><option>Other</option>
-</select></div>
-<div class="full"><label for="requirements">What website do you need? *</label><textarea id="requirements" placeholder="e.g. Vegetable shop website with products and WhatsApp orders" required></textarea></div>
-<div class="full"><label for="budget">Approximate budget</label>
-<select id="budget"><option>Not sure yet</option><option>₹1,500–₹3,000</option><option>₹3,000–₹7,000</option><option>₹7,000+</option></select></div>
-<div class="full"><button class="btn primary" type="submit">Send Enquiry on WhatsApp ↗</button><p class="formnote">WhatsApp opens with your details filled in. Press Send there to submit the enquiry.</p></div>
-</form>
-</div>
-</div>
-</div>
-</section>
-</main>
-
-<footer class="footer">
-<div class="wrap footerin">
-<a class="logo" href="#home">ABHIMANYU<span>.WEB</span></a>
-<span>Websites designed around your business.</span>
-<span>© <span id="year"></span> ABHIMANYU.WEB</span>
-</div>
-</footer>
-
-<a class="wa" href="https://wa.me/918579973237?text=Hello%20ABHIMANYU.WEB%2C%20I%20want%20to%20discuss%20a%20website%20project." target="_blank" rel="noopener">☏ WhatsApp</a>
-
-<script>
-const waNumber='918579973237';
-document.getElementById('year').textContent=new Date().getFullYear();
-
-document.querySelectorAll('[data-plan]').forEach(a=>{
-  a.addEventListener('click',()=>{
-    document.getElementById('requirements').value='I am interested in the '+a.dataset.plan+'.';
-  });
-});
-
-document.getElementById('enquiryForm').addEventListener('submit',e=>{
-  e.preventDefault();
-  const msg=`Hello ABHIMANYU.WEB!
-
-I want to enquire about a website.
-
-My Name: ${document.getElementById('name').value.trim()}
-Business Type: ${document.getElementById('business').value}
-Website Requirements: ${document.getElementById('requirements').value.trim()}
-Approximate Budget: ${document.getElementById('budget').value}
-
-Please contact me about my project.`;
-
-  const whatsappUrl='https://wa.me/'+waNumber+'?text='+encodeURIComponent(msg);
-  window.open(whatsappUrl,'_blank','noopener');
-});
 </script>
-</body>
-</html>
-```
+<style>
+:root{--bg:#07111f;--panel:#0d1b2d;--text:#f3f7ff;--muted:#a7b6cc;--cyan:#59e1e6;--line:#ffffff1b;--green:#25d366}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:85px}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 Inter,system-ui,-apple-system,"Segoe UI",sans-serif}a{color:inherit;text-decoration:none}.wrap{width:min(1100px,92%);margin:auto}.nav{position:sticky;top:0;z-index:5;background:#07111fee;backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.navin{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}.logo{font-size:1.12rem;font-weight:900;letter-spacing:.3px}.logo span,h1 span{color:var(--cyan)}.links{display:flex;gap:22px;color:var(--muted);font-size:.92rem}.links a:hover{color:var(--cyan)}.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:11px;font-weight:800;border:1px solid var(--line);cursor:pointer;transition:.2s}.btn:hover{transform:translateY(-2px)}.primary{background:linear-gradient(110deg,var(--cyan),#9bf5d1);color:#06111d;border:0}.hero{padding:82px 0 72px;background:radial-gradient(ellipse at 82% 8%,#2467a538,transparent 38%)}.grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}.eyebrow,.kicker{color:var(--cyan);font-size:.78rem;font-weight:900;letter-spacing:1.5px;text-transform:uppercase}.eyebrow{display:inline-block;border:1px solid #59e1e644;border-radius:50px;padding:7px 12px;background:#59e1e60c}h1{font-size:clamp(2.7rem,5.7vw,4.6rem);line-height:1.04;letter-spacing:-2px;margin:20px 0}h1 span{background:linear-gradient(100deg,var(--cyan),#b4c0ff);color:transparent;background-clip:text}.lead{font-size:1.1rem;color:var(--muted);max-width:590px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin:26px 0}.checks{display:flex;gap:17px;flex-wrap:wrap;color:var(--muted);font-size:.88rem}.checks b{color:var(--text)}.preview{padding:18px;border:1px solid #ffffff25;border-radius:24px;background:linear-gradient(145deg,#142942,#091523);box-shadow:0 28px 70px #0006;transform:rotate(1deg)}.dots{display:flex;gap:6px;border-bottom:1px solid var(--line);padding:5px 3px 14px}.dots i{width:8px;height:8px;background:#ffffff55;border-radius:50%}.screen{padding:27px 14px 14px}.screen small{color:var(--cyan);letter-spacing:1.3px;font-weight:900}.screen h2{font-size:2rem;line-height:1.1;margin:10px 0}.screen p{color:var(--muted);font-size:.9rem}.mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}.mini{padding:15px;border-radius:12px;background:#ffffff09;border:1px solid var(--line)}.mini b{display:block}.mini span{font-size:.8rem;color:var(--muted)}section{padding:72px 0}.head{max-width:680px;margin-bottom:30px}.head h2{font-size:clamp(2rem,4vw,2.8rem);line-height:1.12;letter-spacing:-.8px;margin:9px 0 12px}.head p,.card p,.project p,.pricecard>p{color:var(--muted)}.cards,.showcase,.prices{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card,.pricecard{border:1px solid var(--line);border-radius:17px;padding:23px;background:linear-gradient(145deg,#102139,#0a1727)}.ico{width:42px;height:42px;display:grid;place-items:center;border-radius:12px;background:#59e1e618;color:var(--cyan);font-size:1.25rem;margin-bottom:15px}.card h3,.project h3{margin:0 0 7px}.card p,.project p{font-size:.92rem;margin:0}.project{overflow:hidden;border:1px solid var(--line);border-radius:17px;background:var(--panel)}.art{padding:18px;height:170px;display:flex;align-items:end;background:radial-gradient(circle at 80% 15%,#59e1e655,transparent 32%),linear-gradient(135deg,#173956,#10182e)}.project:nth-child(2) .art{background:linear-gradient(135deg,#39265a,#12172b)}.project:nth-child(3) .art{background:linear-gradient(135deg,#584022,#171827)}.browser{width:100%;background:#f5f7ff;color:#14243b;padding:14px;border-radius:10px 10px 0 0}.browser small{display:block;color:#60718a;font-size:.68rem}.browser b{display:block;margin-top:4px;font-size:1.05rem}.pinfo{padding:18px}.tag{display:inline-block;color:var(--cyan);font-size:.73rem;font-weight:900;margin-top:10px}.pricecard{display:flex;flex-direction:column}.pricecard.featured{border-color:#59e1e677;background:linear-gradient(150deg,#123147,#0b192b)}.badge{color:var(--cyan);font-size:.75rem;font-weight:900;text-transform:uppercase;letter-spacing:1px}.pricecard h3{margin:9px 0 0}.price{font-size:2.25rem;font-weight:900}.price small{font-size:.78rem;color:var(--muted);font-weight:500}.pricecard ul{list-style:none;padding:0;flex:1}.pricecard li{padding:6px 0;font-size:.9rem}.pricecard li:before{content:'✓';color:var(--cyan);font-weight:900;margin-right:9px}.note,.formnote{font-size:.82rem;color:var(--muted)}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.step{padding:18px;border-left:2px solid #59e1e666;background:#ffffff04}.step small{color:var(--cyan);font-weight:900}.step h3{font-size:1rem;margin:7px 0}.step p{font-size:.88rem;color:var(--muted);margin:0}.faq{display:grid;grid-template-columns:1fr 1fr;gap:12px}.faq details{border:1px solid var(--line);border-radius:13px;padding:16px;background:#ffffff04}.faq summary{cursor:pointer;font-weight:800}.faq p{color:var(--muted);font-size:.91rem}.contactgrid{display:grid;grid-template-columns:.8fr 1.2fr;gap:20px}.contactbox,.formbox{padding:25px;border:1px solid var(--line);border-radius:18px;background:var(--panel)}.contactbox p{color:var(--muted)}.number{font-size:1.1rem;font-weight:800}.method{padding:13px 0;border-bottom:1px solid var(--line)}.method small{display:block;color:var(--muted)}form{display:grid;grid-template-columns:1fr 1fr;gap:13px}label{font-size:.84rem;font-weight:800;display:block;margin-bottom:5px}input,select,textarea{width:100%;padding:12px 13px;border-radius:10px;border:1px solid #ffffff25;background:#071422;color:var(--text);font:inherit;font-size:.92rem}textarea{min-height:105px;resize:vertical}.full{grid-column:1/-1}form button{width:100%;font:inherit}.footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-size:.85rem}.footerin{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}.wa{position:fixed;right:18px;bottom:18px;z-index:6;background:var(--green);color:#062414;padding:12px 16px;border-radius:40px;font-weight:900;box-shadow:0 8px 25px #0006}@media(max-width:800px){.links{display:none}.grid,.contactgrid{grid-template-columns:1fr}.hero{padding:58px 0}.preview{max-width:520px;width:100%;margin:auto}.cards,.showcase,.prices{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}}@media(max-width:540px){section{padding:55px 0}.cards,.showcase,.prices,.faq{grid-template-columns:1fr}.navin{height:65px}h1{letter-spacing:-1.2px}.contactbox,.formbox{padding:19px}form{grid-template-columns:1fr}.full{grid-column:auto}.checks{gap:10px}.wa{right:10px;bottom:10px}}
+</style></head><body>
+<header class="nav"><div class="wrap navin"><a class="logo" href="#home">ABHIMANYU<span>.WEB</span></a><nav class="links"><a href="#services">Services</a><a href="#work">Sample Work</a><a href="#pricing">Pricing</a><a href="#process">Process</a><a href="#contact">Contact</a></nav><a class="btn primary" href="#contact">Start a Project ↗</a></div></header>
+<main><section class="hero" id="home"><div class="wrap grid"><div><div class="eyebrow">Websites for growing businesses</div><h1>Your business deserves a <span>better website.</span></h1><p class="lead">Modern, mobile-friendly websites for shops, local businesses and personal brands — designed to help customers discover you and contact you easily.</p><div class="actions"><a class="btn primary" href="#contact">Discuss Your Website ↗</a><a class="btn" href="#work">Explore Sample Designs ↓</a></div><div class="checks"><span>✓ <b>Mobile-friendly</b></span><span>✓ <b>WhatsApp enquiries</b></span><span>✓ <b>Clear pricing</b></span></div></div><div class="preview"><div class="dots"><i></i><i></i><i></i></div><div class="screen"><small>YOUR ONLINE PRESENCE</small><h2>Make a great<br>first impression.</h2><p>A clean website helps people understand your business, explore your services and get in touch.</p><div class="mini-grid"><div class="mini"><b>01 / Discover</b><span>Show your business</span></div><div class="mini"><b>02 / Connect</b><span>Make enquiries easy</span></div><div class="mini"><b>03 / Build trust</b><span>Present your services</span></div><div class="mini"><b>04 / Grow</b><span>Be available online</span></div></div></div></div></div></section>
+<section id="services"><div class="wrap"><div class="head"><div class="kicker">What I can build</div><h2>Everything your business needs to get online.</h2><p>Simple, useful websites with the important details customers look for.</p></div><div class="cards"><article class="card"><div class="ico">▦</div><h3>Business Website</h3><p>Introduce your company, show services, share contact details and help customers reach you.</p></article><article class="card"><div class="ico">⌂</div><h3>Shop & Local Business</h3><p>Display products, opening hours, location and WhatsApp ordering or enquiry options.</p></article><article class="card"><div class="ico">✦</div><h3>Portfolio & Personal Brand</h3><p>Present your work, skills, experience and projects in a polished format.</p></article><article class="card"><div class="ico">▤</div><h3>Landing Page</h3><p>A focused page for one service, offer or campaign with a clear call to action.</p></article><article class="card"><div class="ico">☏</div><h3>WhatsApp Enquiries</h3><p>Let visitors fill an enquiry form and open a ready-to-send WhatsApp message.</p></article><article class="card"><div class="ico">↗</div><h3>Responsive Design</h3><p>A layout designed to work across phones, tablets and desktop screens.</p></article></div></div></section>
+<section id="work"><div class="wrap"><div class="head"><div class="kicker">Design examples</div><h2>Ideas for your kind of business.</h2><p>Illustrative design concepts, not completed client projects. Each customer website is tailored to their real business.</p></div><div class="showcase"><article class="project"><div class="art"><div class="browser"><small>LOCAL SHOP / SAMPLE</small><b>Fresh Market</b><small>Fresh produce · Offers · Contact</small></div></div><div class="pinfo"><h3>Local Shop Website</h3><p>Products, offers, location and WhatsApp enquiries.</p><span class="tag">SAMPLE CONCEPT</span></div></article><article class="project"><div class="art"><div class="browser"><small>BUSINESS / SAMPLE</small><b>Nova Services</b><small>Services · About · Get in touch</small></div></div><div class="pinfo"><h3>Company Website</h3><p>Professional services, company details and enquiries.</p><span class="tag">SAMPLE CONCEPT</span></div></article><article class="project"><div class="art"><div class="browser"><small>PORTFOLIO / SAMPLE</small><b>Creative Studio</b><small>Work · About · Contact</small></div></div><div class="pinfo"><h3>Personal Portfolio</h3><p>A clean way to showcase skills and selected work.</p><span class="tag">SAMPLE CONCEPT</span></div></article></div></div></section>
+<section id="pricing"><div class="wrap"><div class="head"><div class="kicker">Simple starting prices</div><h2>Choose a starting point.</h2><p>Final price depends on pages, features and content. Scope and price are confirmed before work begins.</p></div><div class="prices"><article class="pricecard"><span class="badge">Starter</span><h3>One-page Website</h3><div class="price">₹1,500 <small>starting at</small></div><p>For a simple online introduction.</p><ul><li>Single scrolling page</li><li>Mobile-friendly layout</li><li>Business details and services</li><li>WhatsApp contact button</li></ul><a class="btn" href="#contact" data-plan="Starter package (starting at ₹1,500)">Enquire about Starter</a></article><article class="pricecard featured"><span class="badge">Most flexible</span><h3>Business Website</h3><div class="price">₹3,000 <small>starting at</small></div><p>For a business that needs more detail.</p><ul><li>Multi-section website</li><li>Services or product showcase</li><li>WhatsApp enquiry form</li><li>Contact and location details</li></ul><a class="btn primary" href="#contact" data-plan="Business package (starting at ₹3,000)">Enquire about Business</a></article><article class="pricecard"><span class="badge">Custom</span><h3>Advanced Website</h3><div class="price">₹7,000 <small>starting at</small></div><p>For custom layouts and extra features.</p><ul><li>Custom page structure</li><li>Detailed sections</li><li>Feature planning</li><li>Scope agreed beforehand</li></ul><a class="btn" href="#contact" data-plan="Advanced package (starting at ₹7,000)">Discuss Custom Work</a></article></div><p class="note">Prices are indicative starting prices, not a final quote. Domain, hosting, paid services and advanced functionality may cost extra if required.</p></div></section>
+<section id="process"><div class="wrap"><div class="head"><div class="kicker">How it works</div><h2>A clear process from idea to launch.</h2><p>You’ll know what information is needed and what happens next.</p></div><div class="steps"><article class="step"><small>STEP 01</small><h3>Tell me your idea</h3><p>Share your business type, goals and preferred style.</p></article><article class="step"><small>STEP 02</small><h3>Confirm the plan</h3><p>Agree on pages, features, price and timeline.</p></article><article class="step"><small>STEP 03</small><h3>Review the design</h3><p>Check the draft and share changes before launch.</p></article><article class="step"><small>STEP 04</small><h3>Launch your site</h3><p>Publish after final checks and agreed approval.</p></article></div></div></section>
+<section id="faq"><div class="wrap"><div class="head"><div class="kicker">Common questions</div><h2>Good to know before we start.</h2></div><div class="faq"><details><summary>How much does a website cost?</summary><p>Packages start at the prices shown. Final pricing depends on pages and features and is confirmed before work begins.</p></details><details><summary>Will it work on mobile phones?</summary><p>Yes. The responsive layout adapts to common phone, tablet and desktop screens.</p></details><details><summary>Can customers contact me on WhatsApp?</summary><p>Yes. The form opens WhatsApp with a prepared message. The customer reviews and sends it in WhatsApp.</p></details><details><summary>What information should I provide?</summary><p>Your business name, services, contact details, logo and photos if available. We can discuss anything missing.</p></details></div></div></section>
+<section id="contact"><div class="wrap"><div class="head"><div class="kicker">Let’s talk</div><h2>Tell me about your website project.</h2><p>Fill in the form to prepare your enquiry in WhatsApp.</p></div><div class="contactgrid"><div class="contactbox"><h3>Let’s build your online presence.</h3><p>Share a little about your business and what you need. I’ll get the details through WhatsApp.</p><div class="method"><small>Call / WhatsApp</small><a class="number" href="https://wa.me/918579973237" target="_blank" rel="noopener">+91 8579973237 ↗</a></div><div class="method"><small>Next step</small><b>Discuss your requirements</b></div><p class="note">No payment is taken through this website. Project scope and pricing are discussed directly.</p><a class="btn" href="https://wa.me/918579973237?text=Hello%20ABHIMANYU.WEB%2C%20I%20want%20to%20discuss%20a%20website%20project." target="_blank" rel="noopener">Chat on WhatsApp ↗</a></div><div class="formbox"><h3>Project enquiry</h3><form id="enquiryForm"><div><label for="name">Your name *</label><input id="name" autocomplete="name" placeholder="e.g. Rahul" required></div><div><label for="business">Business type *</label><select id="business" required><option value="">Choose one</option><option>Shop / Retail</option><option>Food / Restaurant</option><option>Construction / Services</option><option>Professional / Company</option><option>Portfolio / Personal</option><option>Other</option></select></div><div class="full"><label for="requirements">What website do you need? *</label><textarea id="requirements" placeholder="e.g. Vegetable shop website with products and WhatsApp orders" required></textarea></div><div class="full"><label for="budget">Approximate budget</label><select id="budget"><option>Not sure yet</option><option>₹1,500–₹3,000</option><option>₹3,000–₹7,000</option><option>₹7,000+</option></select></div><div class="full"><button class="btn primary" type="submit">Send Enquiry on WhatsApp ↗</button><p class="formnote">WhatsApp opens with your details filled in. Press Send there to submit the enquiry.</p></div></form></div></div></div></section></main>
+<footer class="footer"><div class="wrap footerin"><a class="logo" href="#home">ABHIMANYU<span>.WEB</span></a><span>Websites designed around your business.</span><span>© <span id="year"></span> ABHIMANYU.WEB</span></div></footer><a class="wa" href="https://wa.me/918579973237?text=Hello%20ABHIMANYU.WEB%2C%20I%20want%20to%20discuss%20a%20website%20project." target="_blank" rel="noopener">☏ WhatsApp</a>
+<script>const waNumber='918579973237';document.getElementById('year').textContent=new Date().getFullYear();document.querySelectorAll('[data-plan]').forEach(a=>a.addEventListener('click',()=>document.getElementById('requirements').value='I am interested in the '+a.dataset.plan+'.'));document.getElementById('enquiryForm').addEventListener('submit',e=>{e.preventDefault();const msg=`Hello ABHIMANYU.WEB!\n\nI want to enquire about a website.\n\nMy Name: ${document.getElementById('name').value.trim()}\nBusiness Type: ${document.getElementById('business').value}\nWebsite Requirements: ${document.getElementById('requirements').value.trim()}\nApproximate Budget: ${document.getElementById('budget').value}\n\nPlease contact me about my project.`;window.open('https://wa.me/'+waNumber+'?text='+encodeURIComponent(msg),'_blank','noopener');});</script></body></html>
