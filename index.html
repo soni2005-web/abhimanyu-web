@@ -1,0 +1,583 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ABHIMANYU.WEB | Website Design Services</title>
+
+<meta name="description" content="ABHIMANYU.WEB creates modern, mobile-friendly websites for shops, small businesses and professionals.">
+
+<style>
+:root {
+    --bg: #07111f;
+    --card: #101f33;
+    --text: #f4f7fb;
+    --muted: #b5c2d4;
+    --accent: #32d6c5;
+    --blue: #4c8dff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: min(1100px, 92%);
+    margin: auto;
+}
+
+header {
+    background: #0b1829;
+    border-bottom: 1px solid #22334a;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar {
+    min-height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+nav {
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: var(--accent);
+}
+
+.hero {
+    padding: 90px 0 75px;
+    background:
+        radial-gradient(circle at 85% 20%, #163a50 0, transparent 35%),
+        var(--bg);
+}
+
+.badge {
+    display: inline-block;
+    border: 1px solid #2b756f;
+    color: var(--accent);
+    padding: 7px 13px;
+    border-radius: 30px;
+    font-size: 13px;
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    font-size: clamp(36px, 6vw, 62px);
+    line-height: 1.12;
+    max-width: 780px;
+    margin-bottom: 22px;
+}
+
+.hero h1 span {
+    color: var(--accent);
+}
+
+.hero p {
+    color: var(--muted);
+    max-width: 650px;
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+
+.buttons {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 21px;
+    border-radius: 9px;
+    background: var(--accent);
+    color: #06201f;
+    font-weight: bold;
+    border: 0;
+    cursor: pointer;
+    font-size: 15px;
+    text-align: center;
+}
+
+.btn:hover {
+    opacity: 0.88;
+}
+
+.btn-outline {
+    border: 1px solid #40536b;
+    background: transparent;
+    color: var(--text);
+}
+
+section {
+    padding: 70px 0;
+}
+
+.section-title {
+    font-size: 34px;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.section-desc {
+    text-align: center;
+    color: var(--muted);
+    margin: 0 auto 38px;
+    max-width: 650px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: var(--card);
+    border: 1px solid #23364d;
+    border-radius: 16px;
+    padding: 25px;
+}
+
+.card h3 {
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.card p,
+.card li {
+    color: var(--muted);
+    font-size: 15px;
+}
+
+.card ul {
+    padding-left: 19px;
+    margin: 18px 0;
+}
+
+.card li {
+    margin-bottom: 8px;
+}
+
+.icon {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.price {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 15px 0;
+    color: var(--accent);
+}
+
+.price small {
+    font-size: 13px;
+    color: var(--muted);
+    font-weight: normal;
+}
+
+.highlight {
+    border-color: var(--accent);
+}
+
+.note {
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 22px;
+}
+
+.about-box {
+    background: linear-gradient(135deg, #102a3b, #101f33);
+    border: 1px solid #28465c;
+    padding: 32px;
+    border-radius: 18px;
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+}
+
+.about-box p {
+    color: var(--muted);
+    margin-top: 12px;
+}
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 25px;
+    align-items: start;
+}
+
+.contact-info,
+.contact-form {
+    background: var(--card);
+    border: 1px solid #23364d;
+    border-radius: 16px;
+    padding: 25px;
+}
+
+.contact-info p {
+    color: var(--muted);
+    margin: 15px 0;
+}
+
+.contact-info a {
+    color: var(--accent);
+    overflow-wrap: anywhere;
+}
+
+label {
+    display: block;
+    margin: 14px 0 6px;
+    font-size: 14px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #354a63;
+    border-radius: 8px;
+    background: #091626;
+    color: var(--text);
+    font: inherit;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.contact-form .btn {
+    width: 100%;
+    margin-top: 18px;
+}
+
+footer {
+    padding: 27px 0;
+    border-top: 1px solid #22334a;
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+@media (max-width: 760px) {
+    .navbar {
+        padding: 15px 0;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    nav {
+        gap: 13px;
+    }
+
+    .hero {
+        padding: 60px 0;
+    }
+
+    .grid,
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 52px 0;
+    }
+
+    .section-title {
+        font-size: 29px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="container navbar">
+        <a href="#home" class="logo">ABHIMANYU<span>.WEB</span></a>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="hero" id="home">
+        <div class="container">
+            <span class="badge">WEBSITE DESIGN & DEVELOPMENT</span>
+
+            <h1>Your Business Deserves a <span>Better Website.</span></h1>
+
+            <p>
+                We help shops, small businesses and professionals build
+                modern websites that look good on mobile phones and computers.
+                Let's bring your business online.
+            </p>
+
+            <div class="buttons">
+                <a class="btn" href="#contact">Get a Website</a>
+                <a class="btn btn-outline" href="#services">Explore Services</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <p class="section-desc">
+                Website solutions for businesses that want to grow online.
+            </p>
+
+            <div class="grid">
+                <article class="card">
+                    <div class="icon">🏪</div>
+                    <h3>Shop Websites</h3>
+                    <p>
+                        Show your products, business details, opening hours
+                        and contact information online.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <div class="icon">🏢</div>
+                    <h3>Business Websites</h3>
+                    <p>
+                        Present your company, services, experience and
+                        customer enquiry details professionally.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <div class="icon">👨‍💻</div>
+                    <h3>Portfolio Websites</h3>
+                    <p>
+                        Display your skills, projects and work experience
+                        in one simple online portfolio.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing">
+        <div class="container">
+            <h2 class="section-title">Simple Pricing</h2>
+            <p class="section-desc">
+                Starting prices for common website types. Final pricing
+                depends on the features and requirements.
+            </p>
+
+            <div class="grid">
+                <article class="card">
+                    <h3>Starter</h3>
+                    <p>For a simple online presence.</p>
+                    <div class="price">₹1,500 <small>starting at</small></div>
+                    <ul>
+                        <li>One-page website</li>
+                        <li>Mobile-friendly layout</li>
+                        <li>Business information</li>
+                        <li>Contact button</li>
+                    </ul>
+                    <a class="btn btn-outline" href="#contact">Enquire Now</a>
+                </article>
+
+                <article class="card highlight">
+                    <h3>Business</h3>
+                    <p>For shops and small businesses.</p>
+                    <div class="price">₹3,000 <small>starting at</small></div>
+                    <ul>
+                        <li>Multiple sections</li>
+                        <li>Services or products</li>
+                        <li>Contact form</li>
+                        <li>Responsive design</li>
+                    </ul>
+                    <a class="btn" href="#contact">Enquire Now</a>
+                </article>
+
+                <article class="card">
+                    <h3>Professional</h3>
+                    <p>For more customised requirements.</p>
+                    <div class="price">₹7,000 <small>starting at</small></div>
+                    <ul>
+                        <li>Custom website design</li>
+                        <li>Additional pages</li>
+                        <li>Project-specific features</li>
+                        <li>Requirements discussion</li>
+                    </ul>
+                    <a class="btn btn-outline" href="#contact">Enquire Now</a>
+                </article>
+            </div>
+
+            <p class="note">
+                Prices are indicative examples, not a binding quotation.
+                Domain, hosting and additional features may cost extra.
+            </p>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <div class="about-box">
+                <h2>About ABHIMANYU.WEB</h2>
+                <p>
+                    ABHIMANYU.WEB aims to help local shops, startups and
+                    professionals establish their presence on the internet
+                    with clear, modern and mobile-friendly websites.
+                </p>
+                <p>
+                    Tell us about your business and the type of website
+                    you need. We can discuss the requirements and pricing.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Let's Discuss Your Website</h2>
+            <p class="section-desc">
+                Fill in your details and contact us about your project.
+            </p>
+
+            <div class="contact-layout">
+                <div class="contact-info">
+                    <h3>Contact Details</h3>
+
+                    <p>
+                        📧 Email:<br>
+                        <a href="mailto:abhimanyuma4@gmail.com">
+                            abhimanyuma4@gmail.com
+                        </a>
+                    </p>
+
+                    <p>
+                        Click below to contact us by email.
+                    </p>
+
+                    <a class="btn"
+                       href="mailto:abhimanyuma4@gmail.com?subject=Website%20Enquiry">
+                        Email Us
+                    </a>
+                </div>
+
+                <form class="contact-form" id="enquiryForm">
+                    <h3>Project Enquiry</h3>
+
+                    <label for="customerName">Your Name</label>
+                    <input id="customerName" name="customerName"
+                           type="text" placeholder="Enter your name" required>
+
+                    <label for="businessType">Business Type</label>
+                    <select id="businessType" name="businessType" required>
+                        <option value="">Select your business</option>
+                        <option>Shop</option>
+                        <option>Small Business</option>
+                        <option>Company</option>
+                        <option>Portfolio</option>
+                        <option>Other</option>
+                    </select>
+
+                    <label for="requirements">What website do you need?</label>
+                    <textarea id="requirements" name="requirements"
+                              placeholder="Tell us about your website requirements"
+                              required></textarea>
+
+                    <button class="btn" type="submit">
+                        Send Enquiry by Email
+                    </button>
+
+                    <p class="note">
+                        Your email application will open with your enquiry.
+                        You will need to send the email yourself.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        © <span id="year"></span> ABHIMANYU.WEB. All rights reserved.
+    </div>
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+
+document.getElementById("enquiryForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById("customerName").value.trim();
+    const business = document.getElementById("businessType").value;
+    const requirements = document.getElementById("requirements").value.trim();
+
+    const subject = encodeURIComponent("New Website Enquiry from " + name);
+
+    const body = encodeURIComponent(
+        "Hello ABHIMANYU.WEB,\n\n" +
+        "Name: " + name + "\n" +
+        "Business type: " + business + "\n" +
+        "Website requirements: " + requirements + "\n\n" +
+        "Please contact me about my website project."
+    );
+
+    window.location.href =
+        "mailto:abhimanyuma4@gmail.com?subject=" + subject + "&body=" + body;
+});
+</script>
+
+</body>
+</html>
+```
