@@ -102,9 +102,9 @@
   </div></section>
   <section id="work"><div class="wrap"><div class="section-head"><span class="kicker">Sample concepts</span><h2>See the kind of website you could have.</h2><p>These are illustrative demo concepts, not completed client projects. Your website would be tailored to your real business.</p></div>
     <div class="showcase">
-      <article class="project"><div class="project-art"><div class="mock-browser"><small>LOCAL SHOP · SAMPLE</small><b>Fresh Market</b><small>Products · Offers · Contact</small><div class="mock-lines" aria-hidden="true"><i></i><i></i><i></i></div></div></div><div class="project-info"><h3>Local Shop Website</h3><p>Products, offers, location and WhatsApp enquiries.</p><span class="project-tag">DEMO CONCEPT · NOT A CLIENT PROJECT</span><button class="btn btn-primary demo-open" type="button" data-demo="market">Live Demo Dekhein ↗</button></div></article>
-      <article class="project"><div class="project-art"><div class="mock-browser"><small>COMPANY · SAMPLE</small><b>Nova Services</b><small>Services · About · Get in touch</small><div class="mock-lines" aria-hidden="true"><i></i><i></i><i></i></div></div></div><div class="project-info"><h3>Company Website</h3><p>Professional services, company details and enquiries.</p><span class="project-tag">DEMO CONCEPT · NOT A CLIENT PROJECT</span><button class="btn btn-primary demo-open" type="button" data-demo="nova">Live Demo Dekhein ↗</button></div></article>
-      <article class="project"><div class="project-art"><div class="mock-browser"><small>PORTFOLIO · SAMPLE</small><b>Creative Studio</b><small>Work · Profile · Contact</small><div class="mock-lines" aria-hidden="true"><i></i><i></i><i></i></div></div></div><div class="project-info"><h3>Personal Portfolio</h3><p>A simple home for your skills, work and personal brand.</p><span class="project-tag">DEMO CONCEPT · NOT A CLIENT PROJECT</span><button class="btn btn-primary demo-open" type="button" data-demo="creative">Live Demo Dekhein ↗</button></div></article>
+      <article class="project"><div class="project-art"><div class="mock-browser"><small>LOCAL SHOP · SAMPLE</small><b>Fresh Market</b><small>Products · Offers · Contact</small><div class="mock-lines" aria-hidden="true"><i></i><i></i><i></i></div></div></div><div class="project-info"><h3>Local Shop Website</h3><p>Products, offers, location and WhatsApp enquiries.</p><span class="project-tag">DEMO CONCEPT · NOT A CLIENT PROJECT</span><a class="btn btn-primary demo-open" href="demos/market.html">Live Demo Dekhein ↗</a></div></article>
+      <article class="project"><div class="project-art"><div class="mock-browser"><small>COMPANY · SAMPLE</small><b>Nova Services</b><small>Services · About · Get in touch</small><div class="mock-lines" aria-hidden="true"><i></i><i></i><i></i></div></div></div><div class="project-info"><h3>Company Website</h3><p>Professional services, company details and enquiries.</p><span class="project-tag">DEMO CONCEPT · NOT A CLIENT PROJECT</span><a class="btn btn-primary demo-open" href="demos/nova.html">Live Demo Dekhein ↗</a></div></article>
+      <article class="project"><div class="project-art"><div class="mock-browser"><small>PORTFOLIO · SAMPLE</small><b>Creative Studio</b><small>Work · Profile · Contact</small><div class="mock-lines" aria-hidden="true"><i></i><i></i><i></i></div></div></div><div class="project-info"><h3>Personal Portfolio</h3><p>A simple home for your skills, work and personal brand.</p><span class="project-tag">DEMO CONCEPT · NOT A CLIENT PROJECT</span><a class="btn btn-primary demo-open" href="demos/creative.html">Live Demo Dekhein ↗</a></div></article>
     </div>
   </div></section>
   <section id="pricing"><div class="wrap"><div class="section-head"><span class="kicker">Starting prices</span><h2>Choose a starting point.</h2><p>Final scope, features, delivery time and price are agreed before work begins.</p></div>
@@ -154,11 +154,6 @@
   <section id="policies"><div class="wrap"><div class="section-head"><span class="kicker">Clear expectations</span><h2>Privacy and project terms.</h2><p>Please review how enquiries work and what is agreed before a project starts.</p></div><div class="faq-grid"><details><summary>Privacy: what happens to my enquiry?</summary><p>This website has no account system or server-side enquiry database. When you submit the form, it prepares a message and opens WhatsApp. Your details are not automatically sent by this page; review the message and press Send yourself. If you send it, WhatsApp processes the message under its own terms and privacy policy. Do not include passwords, payment-card details or other sensitive information in the enquiry.</p></details><details><summary>Project terms: what is included?</summary><p>The prices shown are starting prices, not guaranteed final quotes. Before work starts, both sides should confirm the pages, features, content supplied by the customer, delivery estimate, number of revisions, payment milestones, domain/hosting costs, and any ongoing support in writing. Extra features or changes outside the agreed scope may cost extra. No search-engine ranking, sales result or specific business outcome is guaranteed.</p></details></div></div></section>
 </main>
 
-<div class="demo-modal" id="demoModal" role="dialog" aria-modal="true" aria-label="Sample website live demo" aria-hidden="true">
-  <button class="demo-close" id="demoClose" type="button" aria-label="Close demo">×</button>
-  <div class="demo-shell" id="demoContent"></div>
-</div>
-
 <footer class="footer"><div class="wrap footer-inner"><a class="brand" href="#home">ABHIMANYU<span>.WEB</span></a><span>Websites designed around your business.</span><a href="#policies">Privacy & project terms</a><span>© <span id="year"></span> ABHIMANYU.WEB</span><a href="#home">Back to top ↑</a></div></footer>
 <a class="whatsapp-float" href="https://wa.me/918579973237?text=Hello%20ABHIMANYU.WEB%2C%20I%20want%20to%20discuss%20a%20website%20project." target="_blank" rel="noopener noreferrer" aria-label="Contact ABHIMANYU.WEB on WhatsApp">☏ WhatsApp</a>
 <script>
@@ -186,88 +181,7 @@
     }
   });
 
-  const demoModal = document.getElementById('demoModal');
-  const demoContent = document.getElementById('demoContent');
-  const demoClose = document.getElementById('demoClose');
-  const demoTemplates = {
-    market: `
-      <div class="demo-site" style="--demo-accent:#16834a;--demo-tint:#effaf1;--demo-art:#d8f2dc;--demo-ink:#173a25">
-        <header class="demo-top"><a class="demo-brand" href="#demo-market-home">🥬 Fresh <span>Market</span></a><nav class="demo-nav"><a href="#demo-market-products">Products</a><a href="#demo-market-about">About</a><a href="#demo-market-contact">Contact</a></nav><a class="demo-cta" href="#demo-market-products">Explore Products ↓</a></header>
-        <section class="demo-hero" id="demo-market-home"><div><span class="demo-kicker">Freshness every day · Sample design</span><h2>Fresh picks for your family.</h2><p>A friendly local vegetable shop website where customers can browse popular items, check example prices and ask about availability.</p><a class="demo-cta" href="#demo-market-contact">Ask on WhatsApp ↗</a></div><div class="demo-visual"><div class="demo-visual-card"><span style="font-size:3rem">🥦 🍅 🥕</span><strong>Fresh from the market</strong><p>Seasonal vegetables · Daily essentials · Friendly service</p></div></div></section>
-        <section class="demo-section" id="demo-market-products"><span class="demo-kicker">Popular picks</span><h3>Today’s market basket</h3><p class="demo-sub">Example products and prices only. Final prices can be changed for the real shop.</p><div class="demo-products"><article class="demo-product"><span class="emoji">🥔</span><strong>Potatoes</strong><small>Everyday kitchen staple</small><b>₹30 / kg*</b></article><article class="demo-product"><span class="emoji">🍅</span><strong>Tomatoes</strong><small>Fresh and flavourful</small><b>₹40 / kg*</b></article><article class="demo-product"><span class="emoji">🧅</span><strong>Onions</strong><small>Daily cooking essential</small><b>₹35 / kg*</b></article></div></section>
-        <section class="demo-section" id="demo-market-about" style="background:#f8fbf8"><h3>Why shop local?</h3><div class="demo-feature-grid"><article class="demo-feature"><span class="symbol">🌱</span><h4>Fresh selection</h4><p>Show customers the products your shop stocks.</p></article><article class="demo-feature"><span class="symbol">🧺</span><h4>Easy enquiries</h4><p>Customers can ask about quantity and availability.</p></article><article class="demo-feature"><span class="symbol">📍</span><h4>Your shop details</h4><p>Add your real address, opening hours and delivery area.</p></article></div></section>
-        <section class="demo-banner" id="demo-market-contact"><div><h3>Need vegetables for today?</h3><p>This is a sample website design. Contact ABHIMANYU.WEB to build one for your shop.</p></div><a class="demo-cta" target="_blank" rel="noopener noreferrer" href="https://wa.me/918579973237?text=Hello%20ABHIMANYU.WEB%2C%20I%20saw%20the%20Fresh%20Market%20demo%20and%20want%20a%20similar%20website.">Build a Similar Website ↗</a></section>
-        <footer class="demo-foot"><span>Fresh Market · Illustrative demo</span><span>*Example prices, not a live price list.</span></footer>
-      </div>`,
-    nova: `
-      <div class="demo-site" style="--demo-accent:#5542c2;--demo-tint:#f3f1ff;--demo-art:#dfd9ff;--demo-ink:#201947">
-        <header class="demo-top"><a class="demo-brand" href="#demo-nova-home">NOVA <span>SERVICES</span></a><nav class="demo-nav"><a href="#demo-nova-services">Services</a><a href="#demo-nova-about">About</a><a href="#demo-nova-contact">Contact</a></nav><a class="demo-cta" href="#demo-nova-contact">Get a Quote ↗</a></header>
-        <section class="demo-hero" id="demo-nova-home"><div><span class="demo-kicker">Professional service · Sample design</span><h2>Good work. Clear solutions.</h2><p>A polished company website concept to explain your services, introduce your team and help potential customers request a quote.</p><a class="demo-cta" href="#demo-nova-services">Explore Our Services ↓</a></div><div class="demo-visual"><div class="demo-visual-card"><span style="font-size:2.7rem">✦ ◈ ✧</span><strong>Solutions that move you forward.</strong><p>Reliable service · Clear communication · Work tailored to your needs</p></div></div></section>
-        <section class="demo-section" id="demo-nova-services"><span class="demo-kicker">What we do</span><h3>Services built around your needs</h3><p class="demo-sub">Replace these sample services with the real services your company provides.</p><div class="demo-feature-grid"><article class="demo-feature"><span class="symbol">🧰</span><h4>Installation & Repair</h4><p>Explain the work you carry out and who you help.</p></article><article class="demo-feature"><span class="symbol">📐</span><h4>Planning & Consultation</h4><p>Describe your process and the value customers receive.</p></article><article class="demo-feature"><span class="symbol">🛠️</span><h4>Maintenance & Support</h4><p>Show customers how to request help or a service visit.</p></article></div></section>
-        <section class="demo-section" id="demo-nova-about" style="background:#faf9ff"><h3>A company customers can understand</h3><div class="demo-feature-grid"><article class="demo-feature"><span class="symbol">✓</span><h4>Clear information</h4><p>Service details, business hours and coverage area in one place.</p></article><article class="demo-feature"><span class="symbol">🤝</span><h4>Professional presence</h4><p>Build confidence with real company details and photos.</p></article><article class="demo-feature"><span class="symbol">💬</span><h4>Simple enquiries</h4><p>Let customers ask questions before booking.</p></article></div></section>
-        <section class="demo-banner" id="demo-nova-contact"><div><h3>Have a project in mind?</h3><p>This is a sample layout, not a real service company. We can customise it for your business.</p></div><a class="demo-cta" target="_blank" rel="noopener noreferrer" href="https://wa.me/918579973237?text=Hello%20ABHIMANYU.WEB%2C%20I%20saw%20the%20Nova%20Services%20demo%20and%20want%20a%20similar%20website.">Build a Similar Website ↗</a></section>
-        <footer class="demo-foot"><span>Nova Services · Illustrative demo</span><span>Sample company details; no client claims.</span></footer>
-      </div>`,
-    creative: `
-      <div class="demo-site" style="--demo-accent:#b34c35;--demo-tint:#fff4ef;--demo-art:#f7d8ca;--demo-ink:#3a2020">
-        <header class="demo-top"><a class="demo-brand" href="#demo-creative-home">creative<span>studio.</span></a><nav class="demo-nav"><a href="#demo-creative-work">Selected Work</a><a href="#demo-creative-about">About</a><a href="#demo-creative-contact">Contact</a></nav><a class="demo-cta" href="#demo-creative-contact">Let’s Talk ↗</a></header>
-        <section class="demo-hero" id="demo-creative-home"><div><span class="demo-kicker">Portfolio & personal brand · Sample</span><h2>Ideas made visible.</h2><p>A creative portfolio concept for a designer, photographer, freelancer or small studio to present skills, selected projects and contact details.</p><a class="demo-cta" href="#demo-creative-work">View Selected Work ↓</a></div><div class="demo-visual"><div class="demo-visual-card"><span style="font-size:2.7rem">✳ ✷ ✴</span><strong>Make something memorable.</strong><p>Brand identity · Digital design · Creative direction</p></div></div></section>
-        <section class="demo-section" id="demo-creative-work"><span class="demo-kicker">A few things we make</span><h3>Selected creative work</h3><p class="demo-sub">These are illustrative project tiles, not real client projects. Replace them with your own work.</p><div class="creative-work"><div class="creative-tile">01 / Brand Identity</div><div class="creative-tile">02 / Campaign Design</div><div class="creative-tile">03 / Digital Experience</div></div></section>
-        <section class="demo-section" id="demo-creative-about" style="background:#fff9f6"><h3>Thoughtful work, made with purpose.</h3><div class="demo-feature-grid"><article class="demo-feature"><span class="symbol">✍️</span><h4>Your story</h4><p>Introduce yourself, your experience and what makes your work unique.</p></article><article class="demo-feature"><span class="symbol">✦</span><h4>Your skills</h4><p>Highlight the services, tools and strengths you want clients to notice.</p></article><article class="demo-feature"><span class="symbol">↗</span><h4>Your next project</h4><p>Give visitors a clear path to ask about working with you.</p></article></div></section>
-        <section class="demo-banner" id="demo-creative-contact"><div><h3>Have a project worth sharing?</h3><p>We can adapt this portfolio concept to your personal brand or creative business.</p></div><a class="demo-cta" target="_blank" rel="noopener noreferrer" href="https://wa.me/918579973237?text=Hello%20ABHIMANYU.WEB%2C%20I%20saw%20the%20Creative%20Studio%20demo%20and%20want%20a%20similar%20website.">Build a Similar Website ↗</a></section>
-        <footer class="demo-foot"><span>Creative Studio · Illustrative demo</span><span>Sample projects, not client work.</span></footer>
-      </div>`
-  };
-  let demoOpener = null;
-  function closeDemo() {
-    demoModal.classList.remove('is-open');
-    demoModal.setAttribute('aria-hidden', 'true');
-    document.body.classList.remove('demo-open');
-    demoContent.innerHTML = '';
-    if (demoOpener) demoOpener.focus();
-  }
-  document.querySelectorAll('[data-demo]').forEach(button => {
-    button.addEventListener('click', () => {
-      const template = demoTemplates[button.dataset.demo];
-      if (!template) return;
-      demoOpener = button;
-      demoContent.innerHTML = template;
-      demoModal.classList.add('is-open');
-      demoModal.setAttribute('aria-hidden', 'false');
-      document.body.classList.add('demo-open');
-      demoModal.scrollTop = 0;
-      demoClose.focus();
-    });
-  });
-  // Keep demo navigation inside the modal and avoid adding dead demo IDs to the page URL.
-  demoContent.addEventListener('click', event => {
-    const link = event.target.closest('a[href^="#"]');
-    if (!link) return;
-    const targetId = decodeURIComponent(link.getAttribute('href').slice(1));
-    const target = demoContent.querySelector('#' + CSS.escape(targetId));
-    if (target) {
-      event.preventDefault();
-      target.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
-    }
-  });
-  demoClose.addEventListener('click', closeDemo);
-  demoModal.addEventListener('click', event => { if (event.target === demoModal) closeDemo(); });
-  document.addEventListener('keydown', event => {
-    if (event.key === 'Escape' && demoModal.classList.contains('is-open')) {
-      closeDemo();
-      return;
-    }
-    if (event.key === 'Escape' && navLinks.classList.contains('open')) setMenuOpen(false);
-    if (event.key === 'Tab' && demoModal.classList.contains('is-open')) {
-      const focusable = [...demoModal.querySelectorAll('a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])')];
-      if (!focusable.length) return;
-      const first = focusable[0];
-      const last = focusable[focusable.length - 1];
-      if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
-      else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
-    }
-  });
-
+  // Sample websites now open as standalone pages in /demos/.
   document.querySelectorAll('[data-plan]').forEach(link => link.addEventListener('click', () => {
     const requirements = document.getElementById('requirements');
     requirements.value = 'I am interested in the ' + link.dataset.plan + '.\n\nMy website requirements: ';
