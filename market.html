@@ -1,34 +1,1246 @@
-Freshness every day · Sample design
-Fresh picks for your family.
-A friendly local vegetable shop website where customers can browse popular items, check example prices and ask about availability.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-Ask on WhatsApp ↗
-🥦 🍅 🥕
-Fresh from the market
-Seasonal vegetables · Daily essentials · Friendly service
+  <title>Fresh Market | Fresh Vegetables for Your Family</title>
 
-Popular picks
-Today’s market basket
-Example products and prices only. Final prices can be changed for the real shop.
+  <meta name="description"
+        content="Explore Fresh Market's vegetable collection, check sample prices and contact us on WhatsApp. A professional local vegetable shop website demo by ABHIMANYU.WEB.">
 
-🥔
-Potatoes
-Everyday kitchen staple
-₹30 / kg*
-🍅
-Tomatoes
-Fresh and flavourful
-₹40 / kg*
-🧅
-Onions
-Daily cooking essential
-₹35 / kg*
-🥕
-Carrots
-Crunchy everyday favourite
-₹50 / kg*
-🥦
-Cauliflower
-Fresh seasonal vegetable
-₹40 / kg*
-🥬
+  <meta name="theme-color" content="#173d2a">
+
+  <style>
+    :root {
+      --green: #173d2a;
+      --green-light: #2f7044;
+      --lime: #d9f27b;
+      --cream: #faf9f2;
+      --white: #ffffff;
+      --text: #25362b;
+      --muted: #718074;
+      --border: #e7e9df;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .container {
+      width: min(1160px, 92%);
+      margin: auto;
+    }
+
+    /* Announcement bar */
+
+    .announcement {
+      background: var(--green);
+      color: white;
+      text-align: center;
+      padding: 9px 12px;
+      font-size: 12px;
+      letter-spacing: 0.5px;
+    }
+
+    .announcement span {
+      color: var(--lime);
+      font-weight: bold;
+    }
+
+    /* Header */
+
+    header {
+      background: rgba(250, 249, 242, 0.97);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .navbar {
+      min-height: 76px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      font-size: 21px;
+      color: var(--green);
+    }
+
+    .logo-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      background: var(--lime);
+      display: grid;
+      place-items: center;
+      font-size: 24px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: var(--green-light);
+    }
+
+    .button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      border: none;
+      border-radius: 999px;
+      padding: 13px 21px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.2s, background 0.2s;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button-dark {
+      background: var(--green);
+      color: white;
+    }
+
+    .button-dark:hover {
+      background: var(--green-light);
+    }
+
+    .button-light {
+      background: white;
+      color: var(--green);
+      border: 1px solid var(--border);
+    }
+
+    /* Hero */
+
+    .hero {
+      padding: 68px 0 76px;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 0.95fr;
+      gap: 58px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      background: #edf3df;
+      color: var(--green);
+      border-radius: 30px;
+      padding: 8px 13px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.7px;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+    .eyebrow-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #65a64b;
+    }
+
+    h1 {
+      font-size: clamp(42px, 5.3vw, 68px);
+      line-height: 1.07;
+      letter-spacing: -2.7px;
+      color: var(--green);
+      margin-bottom: 22px;
+    }
+
+    h1 em {
+      color: #669345;
+      font-family: Georgia, serif;
+      font-weight: 500;
+    }
+
+    .hero-description {
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.9;
+      max-width: 510px;
+      margin-bottom: 28px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    .trust-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 17px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .trust-row strong {
+      color: var(--green);
+    }
+
+    .hero-visual {
+      min-height: 440px;
+      position: relative;
+    }
+
+    .hero-photo {
+      width: 100%;
+      height: 440px;
+      object-fit: cover;
+      border-radius: 180px 180px 25px 25px;
+      display: block;
+      background: #e6eadc;
+    }
+
+    .photo-label {
+      position: absolute;
+      left: -25px;
+      bottom: 30px;
+      background: white;
+      padding: 17px 20px;
+      border-radius: 16px;
+      box-shadow: 0 12px 35px #173d2a18;
+      max-width: 225px;
+    }
+
+    .photo-label strong {
+      display: block;
+      color: var(--green);
+      font-size: 15px;
+    }
+
+    .photo-label small {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .floating-icon {
+      position: absolute;
+      top: 25px;
+      right: -15px;
+      width: 65px;
+      height: 65px;
+      display: grid;
+      place-items: center;
+      background: var(--lime);
+      border-radius: 20px;
+      font-size: 33px;
+      box-shadow: 0 10px 30px #173d2a16;
+    }
+
+    /* Features */
+
+    .features {
+      background: #eef1e5;
+      padding: 24px 0;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .feature {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 9px;
+    }
+
+    .feature-icon {
+      width: 43px;
+      height: 43px;
+      flex-shrink: 0;
+      background: white;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      font-size: 21px;
+    }
+
+    .feature strong {
+      display: block;
+      font-size: 14px;
+      color: var(--green);
+    }
+
+    .feature small {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    /* Section headings */
+
+    .section {
+      padding: 85px 0;
+    }
+
+    .section-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 25px;
+      margin-bottom: 35px;
+    }
+
+    .section-kicker {
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--green-light);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 9px;
+    }
+
+    h2 {
+      font-size: clamp(31px, 4vw, 43px);
+      line-height: 1.18;
+      letter-spacing: -1.4px;
+      color: var(--green);
+    }
+
+    .section-description {
+      max-width: 410px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    /* Products */
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .product-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      overflow: hidden;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 18px 40px #173d2a0c;
+    }
+
+    .product-image-wrap {
+      position: relative;
+      height: 235px;
+      background: #eef0e6;
+      overflow: hidden;
+    }
+
+    .product-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s;
+    }
+
+    .product-card:hover .product-image {
+      transform: scale(1.05);
+    }
+
+    .product-tag {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: white;
+      color: var(--green);
+      padding: 6px 11px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    .product-info {
+      padding: 20px;
+    }
+
+    .product-info h3 {
+      font-size: 19px;
+      color: var(--green);
+      margin-bottom: 4px;
+    }
+
+    .product-info p {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 19px;
+    }
+
+    .product-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      border-top: 1px solid var(--border);
+      padding-top: 15px;
+    }
+
+    .price {
+      font-size: 21px;
+      font-weight: 800;
+      color: var(--green);
+    }
+
+    .price small {
+      display: block;
+      font-size: 11px;
+      font-weight: 400;
+      color: var(--muted);
+    }
+
+    .order-button {
+      background: #eaf4dd;
+      color: var(--green);
+      border: none;
+      border-radius: 25px;
+      padding: 10px 13px;
+      font-size: 12px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .order-button:hover {
+      background: var(--lime);
+    }
+
+    .sample-note {
+      background: #f0f1e7;
+      border-radius: 12px;
+      padding: 14px 17px;
+      color: #687469;
+      font-size: 12px;
+      margin-top: 25px;
+    }
+
+    /* About strip */
+
+    .about-strip {
+      background: var(--green);
+      color: white;
+      padding: 58px 0;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 45px;
+    }
+
+    .about-strip h2 {
+      color: white;
+      margin-bottom: 15px;
+    }
+
+    .about-strip p {
+      color: #d0ddcf;
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    .about-points {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .about-point {
+      border: 1px solid #ffffff25;
+      background: #ffffff09;
+      border-radius: 14px;
+      padding: 18px;
+    }
+
+    .about-point span {
+      display: block;
+      font-size: 24px;
+      margin-bottom: 7px;
+    }
+
+    .about-point strong {
+      font-size: 13px;
+    }
+
+    /* Contact */
+
+    .contact-section {
+      padding: 85px 0;
+    }
+
+    .contact-card {
+      background: #edf2e3;
+      border-radius: 26px;
+      padding: 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .contact-card h2 {
+      margin-bottom: 13px;
+    }
+
+    .contact-card p {
+      color: var(--muted);
+      font-size: 14px;
+      max-width: 560px;
+    }
+
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+
+    /* Footer */
+
+    footer {
+      background: #102c1e;
+      color: white;
+      padding: 35px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .footer-brand {
+      font-size: 17px;
+      font-weight: 800;
+    }
+
+    .footer-brand span {
+      color: var(--lime);
+    }
+
+    footer p {
+      color: #c2d0c4;
+      font-size: 12px;
+    }
+
+    .footer-credit {
+      text-align: right;
+    }
+
+    .footer-credit a {
+      color: var(--lime);
+    }
+
+    /* WhatsApp floating button */
+
+    .whatsapp-float {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 20;
+      width: 57px;
+      height: 57px;
+      border-radius: 50%;
+      background: #25d366;
+      color: white;
+      display: grid;
+      place-items: center;
+      font-size: 27px;
+      box-shadow: 0 8px 24px #0002;
+      border: 3px solid white;
+    }
+
+    /* Responsive design */
+
+    @media (max-width: 850px) {
+      .hero-grid {
+        grid-template-columns: 1fr 0.85fr;
+        gap: 30px;
+      }
+
+      .hero-photo {
+        height: 380px;
+      }
+
+      .hero-visual {
+        min-height: 380px;
+      }
+
+      nav {
+        gap: 15px;
+      }
+
+      .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .contact-card {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .navbar {
+        min-height: 68px;
+        flex-wrap: wrap;
+        padding: 12px 0;
+      }
+
+      .logo {
+        font-size: 18px;
+      }
+
+      nav {
+        width: 100%;
+        order: 3;
+        justify-content: space-between;
+        gap: 8px;
+        padding: 7px 0 3px;
+        font-size: 12px;
+      }
+
+      .navbar > .button {
+        padding: 10px 13px;
+        font-size: 12px;
+      }
+
+      .hero {
+        padding: 43px 0 50px;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      h1 {
+        font-size: 46px;
+        letter-spacing: -1.8px;
+      }
+
+      .hero-description {
+        font-size: 14px;
+      }
+
+      .hero-visual {
+        min-height: 350px;
+        margin: 0 10px;
+      }
+
+      .hero-photo {
+        height: 350px;
+        border-radius: 150px 150px 20px 20px;
+      }
+
+      .photo-label {
+        left: -8px;
+        bottom: 15px;
+      }
+
+      .floating-icon {
+        right: -8px;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      .feature {
+        justify-content: flex-start;
+      }
+
+      .section {
+        padding: 60px 0;
+      }
+
+      .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .products-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      .product-image-wrap {
+        height: 250px;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .about-points {
+        gap: 10px;
+      }
+
+      .contact-card {
+        padding: 28px 22px;
+      }
+
+      .contact-actions {
+        width: 100%;
+      }
+
+      .contact-actions .button {
+        width: 100%;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .footer-credit {
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="announcement">
+    FRESHNESS EVERY DAY <span>·</span> A FRESH MARKET SAMPLE WEBSITE
+  </div>
+
+  <header>
+    <div class="container navbar">
+
+      <a class="logo" href="#home" aria-label="Fresh Market home">
+        <span class="logo-icon">🥬</span>
+        <span>Fresh Market</span>
+      </a>
+
+      <nav aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#products">Vegetables</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a class="button button-dark"
+         href="https://wa.me/918579973237?text=Hello%20ABHIMANYU.WEB%2C%20I%20am%20viewing%20the%20Fresh%20Market%20demo%20and%20want%20to%20discuss%20a%20similar%20website.">
+        Ask on WhatsApp ↗
+      </a>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Hero section -->
+
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+
+        <div>
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            Fresh from the market
+          </div>
+
+          <h1>
+            Fresh picks<br>
+            for your <em>family.</em>
+          </h1>
+
+          <p class="hero-description">
+            Discover everyday vegetables in one friendly place.
+            Browse popular picks, check example prices and contact
+            us to ask about product availability.
+          </p>
+
+          <div class="hero-buttons">
+            <a class="button button-dark" href="#products">
+              Explore Vegetables ↓
+            </a>
+
+            <a class="button button-light"
+               href="https://wa.me/918579973237?text=Hello%20ABHIMANYU.WEB%2C%20I%20am%20viewing%20the%20Fresh%20Market%20demo%20and%20want%20to%20discuss%20a%20similar%20website.">
+              Contact on WhatsApp ↗
+            </a>
+          </div>
+
+          <div class="trust-row">
+            <span>✓ <strong>Fresh-market style</strong></span>
+            <span>✓ <strong>Simple browsing</strong></span>
+            <span>✓ <strong>Mobile friendly</strong></span>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <img
+            class="hero-photo"
+            src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=1000&q=85"
+            alt="A fresh assortment of vegetables and salad ingredients"
+            fetchpriority="high"
+          >
+
+          <div class="floating-icon">🥦</div>
+
+          <div class="photo-label">
+            <strong>Good food starts fresh.</strong>
+            <small>Seasonal vegetables · Daily essentials</small>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Features -->
+
+    <section class="features">
+      <div class="container features-grid">
+
+        <div class="feature">
+          <div class="feature-icon">🥕</div>
+          <div>
+            <strong>Everyday essentials</strong>
+            <small>Popular vegetables in one place</small>
+          </div>
+        </div>
+
+        <div class="feature">
+          <div class="feature-icon">🌱</div>
+          <div>
+            <strong>Seasonal selection</strong>
+            <small>Ask about today's availability</small>
+          </div>
+        </div>
+
+        <div class="feature">
+          <div class="feature-icon">💬</div>
+          <div>
+            <strong>Easy enquiries</strong>
+            <small>Contact directly through WhatsApp</small>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Products -->
+
+    <section class="section" id="products">
+      <div class="container">
+
+        <div class="section-heading">
+          <div>
+            <div class="section-kicker">Popular picks</div>
+            <h2>Today's market basket</h2>
+          </div>
+
+          <p class="section-description">
+            Explore example products from a local vegetable shop.
+            Tap a WhatsApp button to enquire about an item.
+          </p>
+        </div>
+
+        <div class="products-grid">
+
+          <!-- Product 1 -->
+
+          <article class="product-card">
+            <div class="product-image-wrap">
+              <img
+                class="product-image"
+                src="https://images.unsplash.com/photo-1518977676601-b53f82aba655?auto=format&fit=crop&w=700&q=80"
+                alt="Fresh potatoes"
+                loading="lazy"
+              >
+              <span class="product-tag">DAILY ESSENTIAL</span>
+            </div>
+
+            <div class="product-info">
+              <h3>Potatoes</h3>
+              <p>An everyday kitchen staple.</p>
+
+              <div class="product-bottom">
+                <div class="price">
+                  ₹30 <small>per kg · sample price</small>
+                </div>
+
+                <button class="order-button"
+                        type="button"
+                        data-product="Potatoes">
+                  Enquire ↗
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 2 -->
+
+          <article class="product-card">
+            <div class="product-image-wrap">
+              <img
+                class="product-image"
+                src="https://images.unsplash.com/photo-1546094096-0df4bcaaa337?auto=format&fit=crop&w=700&q=80"
+                alt="Fresh red tomatoes"
+                loading="lazy"
+              >
+              <span class="product-tag">POPULAR PICK</span>
+            </div>
+
+            <div class="product-info">
+              <h3>Tomatoes</h3>
+              <p>For curries, salads and everyday meals.</p>
+
+              <div class="product-bottom">
+                <div class="price">
+                  ₹40 <small>per kg · sample price</small>
+                </div>
+
+                <button class="order-button"
+                        type="button"
+                        data-product="Tomatoes">
+                  Enquire ↗
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 3 -->
+
+          <article class="product-card">
+            <div class="product-image-wrap">
+              <img
+                class="product-image"
+                src="https://images.unsplash.com/photo-1508747703725-719777637510?auto=format&fit=crop&w=700&q=80"
+                alt="Fresh onions"
+                loading="lazy"
+              >
+              <span class="product-tag">KITCHEN BASIC</span>
+            </div>
+
+            <div class="product-info">
+              <h3>Onions</h3>
+              <p>A favourite for everyday cooking.</p>
+
+              <div class="product-bottom">
+                <div class="price">
+                  ₹35 <small>per kg · sample price</small>
+                </div>
+
+                <button class="order-button"
+                        type="button"
+                        data-product="Onions">
+                  Enquire ↗
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 4 -->
+
+          <article class="product-card">
+            <div class="product-image-wrap">
+              <img
+                class="product-image"
+                src="https://images.unsplash.com/photo-1445282768818-728615cc910a?auto=format&fit=crop&w=700&q=80"
+                alt="Fresh carrots"
+                loading="lazy"
+              >
+              <span class="product-tag">FRESH PICK</span>
+            </div>
+
+            <div class="product-info">
+              <h3>Carrots</h3>
+              <p>Colourful and crunchy everyday favourites.</p>
+
+              <div class="product-bottom">
+                <div class="price">
+                  ₹50 <small>per kg · sample price</small>
+                </div>
+
+                <button class="order-button"
+                        type="button"
+                        data-product="Carrots">
+                  Enquire ↗
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 5 -->
+
+          <article class="product-card">
+            <div class="product-image-wrap">
+              <img
+                class="product-image"
+                src="https://images.unsplash.com/photo-1568584711271-6c929fb49b60?auto=format&fit=crop&w=700&q=80"
+                alt="Fresh cauliflower"
+                loading="lazy"
+              >
+              <span class="product-tag">SEASONAL PICK</span>
+            </div>
+
+            <div class="product-info">
+              <h3>Cauliflower</h3>
+              <p>A versatile vegetable for family meals.</p>
+
+              <div class="product-bottom">
+                <div class="price">
+                  ₹40 <small>per kg · sample price</small>
+                </div>
+
+                <button class="order-button"
+                        type="button"
+                        data-product="Cauliflower">
+                  Enquire ↗
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 6 -->
+
+          <article class="product-card">
+            <div class="product-image-wrap">
+              <img
+                class="product-image"
+                src="https://images.unsplash.com/photo-1576045057995-568f588f82fb?auto=format&fit=crop&w=700&q=80"
+                alt="Fresh green leafy vegetables"
+                loading="lazy"
+              >
+              <span class="product-tag">GREENS</span>
+            </div>
+
+            <div class="product-info">
+              <h3>Leafy Greens</h3>
+              <p>A fresh green addition to your meals.</p>
+
+              <div class="product-bottom">
+                <div class="price">
+                  ₹25 <small>per bunch · sample price</small>
+                </div>
+
+                <button class="order-button"
+                        type="button"
+                        data-product="Leafy Greens">
+                  Enquire ↗
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="sample-note">
+          <strong>Demo notice:</strong>
+          This is a sample website created to demonstrate a local
+          vegetable shop design. Prices, product availability and
+          business details are examples and must be confirmed by
+          the actual shop before real-world use.
+        </div>
+
+      </div>
+    </section>
+
+    <!-- About -->
+
+    <section class="about-strip" id="about">
+      <div class="container about-grid">
+
+        <div>
+          <div class="section-kicker" style="color:#d9f27b">
+            A friendly local shop
+          </div>
+
+          <h2>Simple shopping.<br>Fresh inspiration.</h2>
+
+          <p>
+            A local shop website should make it easy for customers
+            to discover products, check example prices and get in
+            touch. This design is a starting point that can be
+            customised for a real shop's name, products, location,
+            prices and business hours.
+          </p>
+        </div>
+
+        <div class="about-points">
+
+          <div class="about-point">
+            <span>🥬</span>
+            <strong>Product showcase</strong>
+          </div>
+
+          <div class="about-point">
+            <span>📱</span>
+            <strong>Mobile-friendly layout</strong>
+          </div>
+
+          <div class="about-point">
+            <span>💬</span>
+            <strong>WhatsApp enquiries</strong>
+          </div>
+
+          <div class="about-point">
+            <span>🎨</span>
+            <strong>Custom shop branding</strong>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Contact -->
+
+    <section class="contact-section" id="contact">
+      <div class="container">
+
+        <div class="contact-card">
+          <div>
+            <div class="section-kicker">Let's talk</div>
+            <h2>Want a website like this?</h2>
+
+            <p>
+              This Fresh Market page is a sample design by
+              ABHIMANYU.WEB. Contact us to discuss a customised
+              website for your shop, small business or brand.
+            </p>
+          </div>
+
+          <div class="contact-actions">
+            <a class="button button-dark"
+               href="https://wa.me/918579973237?text=Hello%20ABHIMANYU.WEB%2C%20I%20saw%20the%20Fresh%20Market%20demo%20and%20want%20a%20website%20for%20my%20business.">
+              Discuss Your Website ↗
+            </a>
+
+            <a class="button button-light"
+               href="https://soni2005-web.github.io/abhimanyu-web/">
+              Main Website
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+
+  <footer>
+    <div class="container footer-inner">
+
+      <div>
+        <div class="footer-brand">
+          Fresh <span>Market.</span>
+        </div>
+
+        <p>Fresh-market website concept · Sample design</p>
+      </div>
+
+      <div class="footer-credit">
+        <p>Website concept by</p>
+        <a href="https://soni2005-web.github.io/abhimanyu-web/">
+          <strong>ABHIMANYU.WEB ↗</strong>
+        </a>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp button -->
+
+  <a class="whatsapp-float"
+     href="https://wa.me/918579973237?text=Hello%20ABHIMANYU.WEB%2C%20I%20am%20viewing%20the%20Fresh%20Market%20demo%20and%20want%20to%20discuss%20a%20similar%20website."
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Contact ABHIMANYU.WEB on WhatsApp">
+    ☎
+  </a>
+
+  <script>
+    const whatsappNumber = "918579973237";
+
+    document.querySelectorAll("[data-product]").forEach(function (button) {
+      button.addEventListener("click", function () {
+        const product = button.dataset.product;
+
+        const message =
+          "Hello ABHIMANYU.WEB, I am viewing your Fresh Market sample website. " +
+          "I am interested in the " + product +
+          " product section and would like to discuss a similar website for my business.";
+
+        const whatsappURL =
+          "https://wa.me/" + whatsappNumber +
+          "?text=" + encodeURIComponent(message);
+
+        window.open(whatsappURL, "_blank", "noopener,noreferrer");
+      });
+    });
+  </script>
+
+</body>
+</html>
